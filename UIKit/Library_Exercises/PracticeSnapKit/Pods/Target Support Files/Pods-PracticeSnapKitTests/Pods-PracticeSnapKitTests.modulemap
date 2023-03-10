@@ -1,0 +1,6 @@
+framework module Pods_PracticeSnapKitTests {
+  umbrella header "Pods-PracticeSnapKitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

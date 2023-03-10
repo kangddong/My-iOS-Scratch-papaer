@@ -1,0 +1,221 @@
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust:100%
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-fill);
+  color:var(--color-text)
+}
+
+ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, hgroup, p, blockquote, figure, form, fieldset, input, legend, pre, abbr {
+  margin: 0;
+  padding:0
+}
+
+article, aside, footer, header, nav, main, section, summary, details, hgroup, figure, figcaption {
+  display:block
+}
+
+body {
+  color-schme: light dark;
+  --logo-reference: url('assets/images/swift_dark.svg');
+}
+
+@media screen {
+  body[data-color-scheme="dark"] {
+    --logo-reference: url('assets/images/swift_dark.svg');
+  }
+}
+
+
+body[data-color-scheme="light"] {
+  color-scheme: light
+}
+
+body[data-color-scheme="dark"] {
+  color-scheme:dark
+}
+
+main {
+  max-width: 798px;
+  min-width: 320px;
+  margin-left: 250px;
+  padding: 35px 30px 0;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%
+}
+
+footer[role="contentinfo"] {
+  background: var(--color-nav-background);
+  border-top: 1px solid var(--color-nav-rule);
+  color: var(--color-nav-color);
+  padding: 20px 30px;
+  margin-left: 250px;
+  min-height: 74px
+}
+
+footer[role="contentinfo"] p {
+  font-size: 0.625em;
+  color: var(--color-nav-link-color);
+  line-height: 1em;
+  margin-bottom: 1em;
+  margin-bottom: var(--content-margin-bottom)
+}
+
+footer[role="contentinfo"] p.privacy a {
+  color: var(--color-nav-link-color);
+  border-right: 1px solid var(--color-nav-rule);
+  margin-right: 6px;
+  padding-right: 8px
+}
+
+footer[role="contentinfo"] p.privacy a:last-child {
+  border: none;
+  margin: 0;
+  padding: 0
+}
+
+footer[role="contentinfo"] p:last-child {
+  margin-bottom: 0
+}
+
+footer[role="contentinfo"] aside {
+  position: relative;
+  width: 100%;
+  max-width: 700px
+}
+
+footer[role="contentinfo"] aside i {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  display: block;
+  margin-left: 1em;
+  float: right
+}
+
+footer[role="contentinfo"] aside i.twitter {
+  background-image: url("/assets/images/icon-twitter.svg")
+}
+
+footer[role="contentinfo"] aside i.feed {
+  background-image: url("/assets/images/icon-feed.svg")
+}
+
+#logo a {
+  display: block;
+  width: 190px;
+  height: 48px;
+  background-image: var(--logo-reference);
+  background-repeat: no-repeat;
+  background-size: 190px 48px;
+  background-position-x: -8px
+}
+
+nav[role="navigation"] {
+  width: 250px;
+  position: fixed;
+  overflow: scroll;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--color-nav-background);
+  color: var(--color-nav-color);
+  border-right: 1px solid var(--color-nav-rule);
+  padding: 20px 30px
+}
+
+nav[role="navigation"] ul {
+  border-top: 1px solid var(--color-nav-rule);
+  font-weight: 400;
+  margin-bottom: 30px;
+  list-style: none
+}
+
+nav[role="navigation"] ul ul {
+  list-style: none
+}
+
+nav[role="navigation"] ul li {
+  border-bottom: 1px solid var(--color-nav-rule)
+}
+
+nav[role="navigation"] ul li.active {
+  border-bottom: 1px solid var(--color-active-menu-group)
+}
+
+nav[role="navigation"] ul li.active a {
+  font-weight: 700
+}
+
+nav[role="navigation"] ul li a:link {
+  color: var(--color-nav-link-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  display: block;
+  padding: 10px
+}
+
+nav[role="navigation"] ul li a:visited {
+  color: var(--color-nav-link-color)
+}
+
+nav[role="navigation"] ul li a:active {
+  font-weight: 700
+}
+
+nav[role="navigation"] ul li a:hover {
+  color: var(--color-link)
+}
+
+nav[role="navigation"] ul li ul {
+  margin-bottom: 10px;
+  border-top: none
+}
+
+nav[role="navigation"] ul li ul li {
+  border-bottom: none;
+  padding: 0.1em
+}
+
+nav[role="navigation"] ul li ul li.active {
+  border-bottom: none
+}
+
+nav[role="navigation"] ul li ul li.active a {
+  font-weight: 700
+}
+
+nav[role="navigation"] ul li ul a:link {
+  color: var(--color-nav-link-color);
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 12px;
+  display: block;
+  margin-left: 15px;
+  padding: 0 0 3px;
+  border-bottom: none;
+  font-weight: 300
+}
+
+nav[role="navigation"] ul li ul a:hover {
+  color: var(--color-link)
+}
+
+nav[role="navigation"] h2 {
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  color: var(--color-figure-gray-secondary-alt);
+  padding-bottom:0.5em
+}

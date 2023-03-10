@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExercisePasteString" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NU-Xu-ivz">
+                                <rect key="frame" x="76.666666666666686" y="132" width="240" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAAA-BBBB-CCCC-DDDD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM5-3A-zdJ">
+                                        <rect key="frame" x="17.333333333333329" y="29.666666666666657" width="205" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="BM5-3A-zdJ" firstAttribute="centerY" secondItem="2NU-Xu-ivz" secondAttribute="centerY" id="2bS-Wd-VOa"/>
+                                    <constraint firstAttribute="width" constant="240" id="FpI-Bl-lKq"/>
+                                    <constraint firstItem="BM5-3A-zdJ" firstAttribute="centerX" secondItem="2NU-Xu-ivz" secondAttribute="centerX" id="PxB-ug-yAl"/>
+                                    <constraint firstAttribute="height" constant="80" id="cPf-AO-q1j"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv7-FD-2GT">
+                                <rect key="frame" x="136.66666666666666" y="261" width="119.99999999999997" height="50"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.4549019608" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="H1t-e8-xg0"/>
+                                    <constraint firstAttribute="width" constant="120" id="Zp5-e4-HXg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="복사히기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8Z-Do-82s">
+                                <rect key="frame" x="96.666666666666686" y="364" width="200" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ud0-qP-WoN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2NU-Xu-ivz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="25u-Pt-utw"/>
+                            <constraint firstItem="Wv7-FD-2GT" firstAttribute="centerX" secondItem="2NU-Xu-ivz" secondAttribute="centerX" id="API-r9-kAm"/>
+                            <constraint firstItem="b8Z-Do-82s" firstAttribute="centerX" secondItem="Wv7-FD-2GT" secondAttribute="centerX" id="BnP-uV-xTh"/>
+                            <constraint firstItem="Wv7-FD-2GT" firstAttribute="top" secondItem="2NU-Xu-ivz" secondAttribute="bottom" constant="49" id="Dgn-N1-15D"/>
+                            <constraint firstItem="b8Z-Do-82s" firstAttribute="top" secondItem="Wv7-FD-2GT" secondAttribute="bottom" constant="53" id="Gyx-W8-Kon"/>
+                            <constraint firstItem="2NU-Xu-ivz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="iuL-ne-c3c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pasteButton" destination="Wv7-FD-2GT" id="gx2-pX-Dr2"/>
+                        <outlet property="pasteTextfield" destination="b8Z-Do-82s" id="Cqs-tB-cPo"/>
+                        <outlet property="serialNumber" destination="BM5-3A-zdJ" id="YeG-jv-v5o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92.36641221374046" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

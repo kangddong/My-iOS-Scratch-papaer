@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testTapGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rHM-uN-fUU">
+                                <rect key="frame" x="0.0" y="137" width="393" height="715"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bu-4D-Zw8">
+                                        <rect key="frame" x="0.0" y="0.0" width="401" height="707"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="archivebox" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kCF-BF-aJA">
+                                                <rect key="frame" x="100.66666666666669" y="255.33333333333334" width="200" height="197.00000000000006"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="1HQ-Ns-l95"/>
+                                                    <constraint firstAttribute="width" constant="200" id="IzY-cQ-Ya2"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="kCF-BF-aJA" firstAttribute="centerY" secondItem="3bu-4D-Zw8" secondAttribute="centerY" id="Q66-7J-frS"/>
+                                            <constraint firstItem="kCF-BF-aJA" firstAttribute="centerX" secondItem="3bu-4D-Zw8" secondAttribute="centerX" id="n6Y-Hp-xOC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3bu-4D-Zw8" firstAttribute="leading" secondItem="0ix-SO-Iuc" secondAttribute="leading" id="3or-Za-zKT"/>
+                                    <constraint firstItem="3bu-4D-Zw8" firstAttribute="trailing" secondItem="0ix-SO-Iuc" secondAttribute="trailing" constant="8" id="8V1-F1-Tn3"/>
+                                    <constraint firstItem="3bu-4D-Zw8" firstAttribute="top" secondItem="0ix-SO-Iuc" secondAttribute="top" id="Nh7-te-zcs"/>
+                                    <constraint firstItem="0ix-SO-Iuc" firstAttribute="bottom" secondItem="3bu-4D-Zw8" secondAttribute="bottom" constant="8" id="O8J-lE-PJW"/>
+                                    <constraint firstItem="3bu-4D-Zw8" firstAttribute="width" secondItem="0wh-EV-reU" secondAttribute="width" id="mex-eJ-iZ4"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="0wh-EV-reU"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="0ix-SO-Iuc"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rHM-uN-fUU" secondAttribute="bottom" id="JRq-sE-aor"/>
+                            <constraint firstItem="rHM-uN-fUU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="eWZ-PO-JRb"/>
+                            <constraint firstItem="rHM-uN-fUU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uGd-Ad-2wt"/>
+                            <constraint firstItem="rHM-uN-fUU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vti-Wg-GxP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="otpView" destination="rHM-uN-fUU" id="HrA-tZ-GNZ"/>
+                        <outlet property="testView" destination="3bu-4D-Zw8" id="cnf-fs-XbK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81.679389312977094" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="archivebox" catalog="system" width="128" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

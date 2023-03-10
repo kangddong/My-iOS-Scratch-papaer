@@ -1,0 +1,24 @@
+PODS:
+  - Pageboy (4.0.2)
+  - Tabman (3.0.1):
+    - Pageboy (~> 4.0.2)
+  - Then (3.0.0)
+
+DEPENDENCIES:
+  - Tabman (~> 3.0)
+  - Then
+
+SPEC REPOS:
+  trunk:
+    - Pageboy
+    - Tabman
+    - Then
+
+SPEC CHECKSUMS:
+  Pageboy: 34ff11e8d1041b81769d5bcde9b19a0cb7218bd9
+  Tabman: a5880789298f81d3f2cdd6510b54ae637cfd8e09
+  Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
+
+PODFILE CHECKSUM: 8cce095c37e9d2a9746f72cbd5816c95a9198bf0
+
+COCOAPODS: 1.11.2
