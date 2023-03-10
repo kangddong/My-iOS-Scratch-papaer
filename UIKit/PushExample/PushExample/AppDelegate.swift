@@ -15,8 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        NotificationCenter.default
-        UNUserNotificationCenter.current()
+        
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.delegate = self
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { isGranted, error in
+            
+            if let error = error {
+                print("error: \(error.localizedDescription)")
+            }
+        }
+        
         return true
     }
 
@@ -35,5 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+// MARK: UNUserNotificationCenterDelegate Method
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
 }
 
