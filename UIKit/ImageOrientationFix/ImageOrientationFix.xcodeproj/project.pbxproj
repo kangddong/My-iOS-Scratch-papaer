@@ -18,6 +18,7 @@
 		36567E2F28917DA000CBE927 /* colltestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36567E2E28917DA000CBE927 /* colltestUITestsLaunchTests.swift */; };
 		36567E3C2891856600CBE927 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36567E3B2891856600CBE927 /* ImageCell.swift */; };
 		368652632897CF2600DAA1C2 /* ButtonTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368652622897CF2600DAA1C2 /* ButtonTestViewController.swift */; };
+		36D2604D29BF1E9C00990B89 /* Ex_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2604C29BF1E9C00990B89 /* Ex_UIImage.swift */; };
 		36F8CDC628ADE76E0070FEC6 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 36F8CDC528ADE76E0070FEC6 /* Documentation.docc */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		36567E2E28917DA000CBE927 /* colltestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colltestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		36567E3B2891856600CBE927 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		368652622897CF2600DAA1C2 /* ButtonTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTestViewController.swift; sourceTree = "<group>"; };
+		36D2604C29BF1E9C00990B89 /* Ex_UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex_UIImage.swift; sourceTree = "<group>"; };
 		36F8CDC528ADE76E0070FEC6 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,15 +107,10 @@
 		36567E0A28917D9E00CBE927 /* ImageOrientationFix */ = {
 			isa = PBXGroup;
 			children = (
-				36567E0B28917D9E00CBE927 /* AppDelegate.swift */,
-				36567E0D28917D9E00CBE927 /* SceneDelegate.swift */,
-				36567E0F28917D9E00CBE927 /* ViewController.swift */,
+				36D2604929BF1E5C00990B89 /* Applications */,
+				36D2604B29BF1E8000990B89 /* Presetations */,
 				36567E1128917D9E00CBE927 /* Main.storyboard */,
-				36567E1428917DA000CBE927 /* Assets.xcassets */,
-				36567E1628917DA000CBE927 /* LaunchScreen.storyboard */,
-				36567E1928917DA000CBE927 /* Info.plist */,
-				36567E3B2891856600CBE927 /* ImageCell.swift */,
-				368652622897CF2600DAA1C2 /* ButtonTestViewController.swift */,
+				36D2604A29BF1E6D00990B89 /* Resources */,
 				36F8CDC528ADE76E0070FEC6 /* Documentation.docc */,
 			);
 			path = ImageOrientationFix;
@@ -134,6 +131,36 @@
 				36567E2E28917DA000CBE927 /* colltestUITestsLaunchTests.swift */,
 			);
 			path = ImageOrientationFixUITests;
+			sourceTree = "<group>";
+		};
+		36D2604929BF1E5C00990B89 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				36567E0B28917D9E00CBE927 /* AppDelegate.swift */,
+				36567E0D28917D9E00CBE927 /* SceneDelegate.swift */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		36D2604A29BF1E6D00990B89 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				36567E1428917DA000CBE927 /* Assets.xcassets */,
+				36567E1628917DA000CBE927 /* LaunchScreen.storyboard */,
+				36567E1928917DA000CBE927 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		36D2604B29BF1E8000990B89 /* Presetations */ = {
+			isa = PBXGroup;
+			children = (
+				36567E0F28917D9E00CBE927 /* ViewController.swift */,
+				36567E3B2891856600CBE927 /* ImageCell.swift */,
+				368652622897CF2600DAA1C2 /* ButtonTestViewController.swift */,
+				36D2604C29BF1E9C00990B89 /* Ex_UIImage.swift */,
+			);
+			path = Presetations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +296,7 @@
 			files = (
 				36567E1028917D9E00CBE927 /* ViewController.swift in Sources */,
 				36F8CDC628ADE76E0070FEC6 /* Documentation.docc in Sources */,
+				36D2604D29BF1E9C00990B89 /* Ex_UIImage.swift in Sources */,
 				36567E3C2891856600CBE927 /* ImageCell.swift in Sources */,
 				368652632897CF2600DAA1C2 /* ButtonTestViewController.swift in Sources */,
 				36567E0C28917D9E00CBE927 /* AppDelegate.swift in Sources */,
