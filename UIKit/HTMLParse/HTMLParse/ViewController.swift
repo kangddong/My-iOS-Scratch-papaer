@@ -20,9 +20,11 @@ class ViewController: UIViewController {
         
         downloadHTML()
     }
+}
+
+extension ViewController {
     
-    func downloadHTML() {
-        print(#function)
+    private func downloadHTML() {
         // url string to URL
         var urlString = "https://apps.apple.com/kr/app/카카오뱅크/id1258016944?uo=4"
         if let encodedURL = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
@@ -37,10 +39,8 @@ class ViewController: UIViewController {
         let request = URLRequest(url: url)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             let utf8String = String(data: data!, encoding: .utf8)
-//            print(utf8String)
             do {
                 self.document = try SwiftSoup.parse(utf8String!)
-//                print(self.document)
                 self.parse()
             } catch {
                 
@@ -50,26 +50,23 @@ class ViewController: UIViewController {
         task.resume()
     }
     
-    func parse() {
-        print(#function)
+    private func parse() {
         do {
             //empty old items
             items = []
             // firn css selector
             let elements: Elements = try document.select("h2")
-//            print("elements = \(elements)")
             //transform it into a local object (Item)
             for element in elements {
                 let text = try element.text()
                 let html = try element.outerHtml()
                 items.append(Item(text: text, html: html))
-//                print("items = \(items)")
             }
             items.forEach {
                 print($0.text, $0.html)
             }
             
-            let subtiles = items.filter { $0.html.contains("subtitle") }.flatMap{ $0 }
+            let subtiles = items.filter { $0.html.contains("subtitle") }.compactMap{ $0 }
             
             print("subtiles = \(subtiles)")
             print("title = \(subtiles.first?.text)")
@@ -79,6 +76,4 @@ class ViewController: UIViewController {
         }
 
     }
-
 }
-
