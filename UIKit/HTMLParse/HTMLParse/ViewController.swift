@@ -18,21 +18,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        downloadHTML()
+        let url = "https://apps.apple.com/kr/app/카카오뱅크/id1258016944?uo=4"
+        downloadHTML(url: url) { [weak self] in
+            self?.parse(document: $0)
+        }
     }
 }
 
 extension ViewController {
     
-    private func downloadHTML() {
+    private func downloadHTML(url: String, completionHandler: @escaping (Document?)->()) {
         // url string to URL
-        var urlString = "https://apps.apple.com/kr/app/카카오뱅크/id1258016944?uo=4"
+        var urlString = url
         if let encodedURL = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
             urlString = encodedURL
         }
         guard let url = URL(string: urlString) else {
             // an error occurred
             print("error nil")
+            completionHandler(nil)
             return
         }
 
@@ -40,17 +44,19 @@ extension ViewController {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             let utf8String = String(data: data!, encoding: .utf8)
             do {
-                self.document = try SwiftSoup.parse(utf8String!)
-                self.parse()
+                let document = try SwiftSoup.parse(utf8String!)
+                completionHandler(document)
             } catch {
-                
+                completionHandler(nil)
             }
             
         }
         task.resume()
     }
     
-    private func parse() {
+    private func parse(document: Document?) {
+        guard let document = document else { return }
+        
         do {
             //empty old items
             items = []
