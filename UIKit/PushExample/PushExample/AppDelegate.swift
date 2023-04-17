@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import NotificationCenter
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.delegate = self
         notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { isGranted, error in
             
             if let error = error {
@@ -43,10 +42,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
-
-// MARK: UNUserNotificationCenterDelegate Method
-extension AppDelegate: UNUserNotificationCenterDelegate {
-    
 }
 
