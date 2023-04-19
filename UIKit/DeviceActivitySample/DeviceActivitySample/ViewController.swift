@@ -16,10 +16,6 @@ extension DeviceActivityName {
     static let youtube = Self("youtube")
 }
 
-extension DeviceActivityEvent.Name {
-    static let encouraged = Self("encouraged")
-}
-
 class ViewController: UIViewController {
 
     lazy var showPickerButton: UIButton = {
@@ -45,16 +41,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let authCenter = AuthorizationCenter.shared
-        do {
-            Task(){
-                try await authCenter.requestAuthorization(for: FamilyControlsMember.individual)
-            }
-        } catch let error {
-            print(error.localizedDescription)
-        }
-        requestAuthorization()
-        
         view.addSubview(showPickerButton)
         view.addSubview(startMonitorButton)
         NSLayoutConstraint.activate([
@@ -76,7 +62,7 @@ class ViewController: UIViewController {
     @objc
     func startMonitor() {
         print(#function)
-        // 모니터링 하는 시간  범위
+        // 모니터링 하는 시간  범위₩₩₩₩₩₩
         let schedule = DeviceActivitySchedule(
             intervalStart: DateComponents(hour: 0, minute: 0),
             intervalEnd: DateComponents(hour: 23, minute: 59),
@@ -88,8 +74,19 @@ class ViewController: UIViewController {
         } catch let error {
             print(error.localizedDescription)
         }
+        
+        let events = center.events(for: .youtube)
+        let schedule2 = center.schedule(for: .youtube)
+        let activities = center.activities
+        
+        print(events)
+        print(schedule2)
+        print(activities)
+        
+        
     }
-    func requestAuthorization() {
+    
+    static public func requestAuthorization() {
         let authorizationStatus = AuthorizationCenter.shared.authorizationStatus
         
         switch authorizationStatus {
@@ -113,50 +110,3 @@ class ViewController: UIViewController {
         self.present(hostingController, animated: true)
     }
 }
-
-//extension ViewController {
-//    func schedule() {
-//        let scedule = DeviceActivitySchedule(
-//            intervalStart: DateComponents(hour: 0, minute: 0),
-//            intervalEnd: DateComponents(hour: 23, minute: 59),
-//            repeats: true)
-//
-//
-//        let center = DeviceActivityCenter()
-//        do {
-//            try center.startMonitoring(.daily, during: scedule)
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
-//
-//    func event() {
-//        let scedule = DeviceActivitySchedule(
-//            intervalStart: DateComponents(hour: 0, minute: 0),
-//            intervalEnd: DateComponents(hour: 23, minute: 59),
-//            repeats: true)
-//        let minutes: Int = 30
-//        let model = MyModel()
-////        let event: [DeviceActivityEvent.Name: DeviceActivityEvent] = [
-////            .encouraged: DeviceActivityEvent(
-////                applications: model.selectionToEncourage.applicationTokens,
-////                threshold: DateComponents(minute: minutes))
-////        ]
-//    }
-//}
-//
-//class MyModel {
-//    var selectionToEncourage: (name: String, applicationTokens: [Int]) = ("", [])
-////    let dummyToken: [ApplicationToken] = [
-////        Application(bundleIdentifier: "com").token!,
-////        Application(bundleIdentifier: "com").token!,
-////        Application(bundleIdentifier: "com").token!,
-////        Application(bundleIdentifier: "com").token!,
-////        Application(bundleIdentifier: "com").token!,
-////        Application(bundleIdentifier: "com").token!,
-////    ]
-////
-////    init() {
-////        selectionToEncourage.applicationTokens = dummyToken
-////    }
-//}

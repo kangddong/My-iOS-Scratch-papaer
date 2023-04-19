@@ -14,8 +14,36 @@
 		36FA120C29D29E13004210F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FA120A29D29E13004210F1 /* Main.storyboard */; };
 		36FA120E29D29E15004210F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36FA120D29D29E15004210F1 /* Assets.xcassets */; };
 		36FA121129D29E15004210F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FA120F29D29E15004210F1 /* LaunchScreen.storyboard */; };
-		36FA121929D29E8B004210F1 /* MyMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FA121829D29E8B004210F1 /* MyMonitor.swift */; };
+		EFC1378529F059DE00689E9D /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC1378429F059DE00689E9D /* DeviceActivity.framework */; };
+		EFC1378D29F059DF00689E9D /* DeviceActivitySampleMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EFC1378229F059DE00689E9D /* DeviceActivitySampleMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EFC1379229F05AA400689E9D /* MyMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FA121829D29E8B004210F1 /* MyMonitor.swift */; };
+		EFC1379529F05E7000689E9D /* MySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1379329F05E6300689E9D /* MySchedule.swift */; };
+		EFC1379729F05EA200689E9D /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1379629F05EA200689E9D /* MyModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFC1378B29F059DF00689E9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36FA11F929D29E13004210F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFC1378129F059DE00689E9D;
+			remoteInfo = DeviceActivitySampleMonitor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EFC1379129F059DF00689E9D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EFC1378D29F059DF00689E9D /* DeviceActivitySampleMonitor.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		36D93C5129D2DB1700ADA978 /* DeviceActivitySample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceActivitySample.entitlements; sourceTree = "<group>"; };
@@ -29,6 +57,12 @@
 		36FA121029D29E15004210F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36FA121229D29E15004210F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36FA121829D29E8B004210F1 /* MyMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMonitor.swift; sourceTree = "<group>"; };
+		EFC1378229F059DE00689E9D /* DeviceActivitySampleMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivitySampleMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC1378429F059DE00689E9D /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		EFC1378929F059DF00689E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC1378A29F059DF00689E9D /* DeviceActivitySampleMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceActivitySampleMonitor.entitlements; sourceTree = "<group>"; };
+		EFC1379329F05E6300689E9D /* MySchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySchedule.swift; sourceTree = "<group>"; };
+		EFC1379629F05EA200689E9D /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +73,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFC1377F29F059DE00689E9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC1378529F059DE00689E9D /* DeviceActivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				36FA120329D29E13004210F1 /* DeviceActivitySample */,
+				EFC1378629F059DF00689E9D /* DeviceActivitySampleMonitor */,
+				EFC1378329F059DE00689E9D /* Frameworks */,
 				36FA120229D29E13004210F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				36FA120129D29E13004210F1 /* DeviceActivitySample.app */,
+				EFC1378229F059DE00689E9D /* DeviceActivitySampleMonitor.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,14 +110,33 @@
 				36FA120429D29E13004210F1 /* AppDelegate.swift */,
 				36FA120629D29E13004210F1 /* SceneDelegate.swift */,
 				36FA120829D29E13004210F1 /* ViewController.swift */,
-				36FA121829D29E8B004210F1 /* MyMonitor.swift */,
 				36FA120A29D29E13004210F1 /* Main.storyboard */,
 				36FA120D29D29E15004210F1 /* Assets.xcassets */,
 				36FA120F29D29E15004210F1 /* LaunchScreen.storyboard */,
+				EFC1379329F05E6300689E9D /* MySchedule.swift */,
+				EFC1379629F05EA200689E9D /* MyModel.swift */,
 				36FA121229D29E15004210F1 /* Info.plist */,
 				36D93C5229D2DD5D00ADA978 /* ExampleView.swift */,
 			);
 			path = DeviceActivitySample;
+			sourceTree = "<group>";
+		};
+		EFC1378329F059DE00689E9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFC1378429F059DE00689E9D /* DeviceActivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFC1378629F059DF00689E9D /* DeviceActivitySampleMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				36FA121829D29E8B004210F1 /* MyMonitor.swift */,
+				EFC1378929F059DF00689E9D /* Info.plist */,
+				EFC1378A29F059DF00689E9D /* DeviceActivitySampleMonitor.entitlements */,
+			);
+			path = DeviceActivitySampleMonitor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,15 +149,34 @@
 				36FA11FD29D29E13004210F1 /* Sources */,
 				36FA11FE29D29E13004210F1 /* Frameworks */,
 				36FA11FF29D29E13004210F1 /* Resources */,
+				EFC1379129F059DF00689E9D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EFC1378C29F059DF00689E9D /* PBXTargetDependency */,
 			);
 			name = DeviceActivitySample;
 			productName = DeviceActivitySample;
 			productReference = 36FA120129D29E13004210F1 /* DeviceActivitySample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EFC1378129F059DE00689E9D /* DeviceActivitySampleMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC1378E29F059DF00689E9D /* Build configuration list for PBXNativeTarget "DeviceActivitySampleMonitor" */;
+			buildPhases = (
+				EFC1377E29F059DE00689E9D /* Sources */,
+				EFC1377F29F059DE00689E9D /* Frameworks */,
+				EFC1378029F059DE00689E9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeviceActivitySampleMonitor;
+			productName = DeviceActivitySampleMonitor;
+			productReference = EFC1378229F059DE00689E9D /* DeviceActivitySampleMonitor.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -102,11 +185,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					36FA120029D29E13004210F1 = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					EFC1378129F059DE00689E9D = {
+						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
@@ -124,6 +210,7 @@
 			projectRoot = "";
 			targets = (
 				36FA120029D29E13004210F1 /* DeviceActivitySample */,
+				EFC1378129F059DE00689E9D /* DeviceActivitySampleMonitor */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +226,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFC1378029F059DE00689E9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -146,15 +240,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36FA121929D29E8B004210F1 /* MyMonitor.swift in Sources */,
 				36FA120929D29E13004210F1 /* ViewController.swift in Sources */,
+				EFC1379729F05EA200689E9D /* MyModel.swift in Sources */,
 				36FA120529D29E13004210F1 /* AppDelegate.swift in Sources */,
+				EFC1379529F05E7000689E9D /* MySchedule.swift in Sources */,
 				36FA120729D29E13004210F1 /* SceneDelegate.swift in Sources */,
 				36D93C5329D2DD5D00ADA978 /* ExampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFC1377E29F059DE00689E9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC1379229F05AA400689E9D /* MyMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFC1378C29F059DF00689E9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFC1378129F059DE00689E9D /* DeviceActivitySampleMonitor */;
+			targetProxy = EFC1378B29F059DF00689E9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		36FA120A29D29E13004210F1 /* Main.storyboard */ = {
@@ -293,6 +404,7 @@
 		36FA121629D29E15004210F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DeviceActivitySample/DeviceActivitySample.entitlements;
@@ -322,6 +434,7 @@
 		36FA121729D29E15004210F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DeviceActivitySample/DeviceActivitySample.entitlements;
@@ -348,6 +461,60 @@
 			};
 			name = Release;
 		};
+		EFC1378F29F059DF00689E9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivitySampleMonitor/DeviceActivitySampleMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivitySampleMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivitySampleMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KDY.DeviceActivitySample.DeviceActivitySampleMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFC1379029F059DF00689E9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DeviceActivitySampleMonitor/DeviceActivitySampleMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeviceActivitySampleMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DeviceActivitySampleMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KDY.DeviceActivitySample.DeviceActivitySampleMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -365,6 +532,15 @@
 			buildConfigurations = (
 				36FA121629D29E15004210F1 /* Debug */,
 				36FA121729D29E15004210F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC1378E29F059DF00689E9D /* Build configuration list for PBXNativeTarget "DeviceActivitySampleMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC1378F29F059DF00689E9D /* Debug */,
+				EFC1379029F059DF00689E9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

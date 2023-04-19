@@ -7,27 +7,22 @@
 
 import SwiftUI
 import FamilyControls
-class MyModel: ObservableObject {
-    @State var selectionToDiscourage = FamilyActivitySelection() {
-        didSet {
-            print(selectionToDiscourage)
-        }
-    }
-    
-}
+import ManagedSettings
+
 struct ExampleView: View {
-    @StateObject var model = MyModel()
-    @State var isPresent: Bool = false
-    @State var selection = FamilyActivitySelection()
+    @State private var isDiscouragedPresented = false
+    
+    @EnvironmentObject var model: MyModel
     
     var body: some View {
         VStack {
-            Button("plz select block app") { isPresent = true }
-                .familyActivityPicker(isPresented: $isPresent,
-                                      selection: $selection)
-                .onChange(of: selection) { newSelection in
-                    
-                }
+            Button("Select Apps to Discourage") {
+                isDiscouragedPresented = true
+            }
+            .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
+        }
+        .onChange(of: model.selectionToDiscourage) { newSelection in
+            MyModel.shared.setShieldRestrictions()
         }
     }
 }
