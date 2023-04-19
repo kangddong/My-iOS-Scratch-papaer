@@ -13,7 +13,7 @@ import SwiftUI
 
 extension DeviceActivityName {
     //
-    static let daily = Self("daily")
+    static let youtube = Self("youtube")
 }
 
 extension DeviceActivityEvent.Name {
@@ -22,23 +22,73 @@ extension DeviceActivityEvent.Name {
 
 class ViewController: UIViewController {
 
+    lazy var showPickerButton: UIButton = {
+        let button: UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemOrange
+        button.setTitle("show", for: .normal)
+        button.addTarget(self, action: #selector(openSwiftUIView), for: .touchUpInside)
+        
+        return button
+    }()
+    
+    lazy var startMonitorButton: UIButton = {
+        let button: UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemOrange
+        button.setTitle("startMonitorButton", for: .normal)
+        button.addTarget(self, action: #selector(startMonitor), for: .touchUpInside)
+        
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Task(priority: .userInitiated) {
-            try await AuthorizationCenter.shared.requestAuthorization(for: .individual)
+        let authCenter = AuthorizationCenter.shared
+        do {
+            Task(){
+                try await authCenter.requestAuthorization(for: FamilyControlsMember.individual)
+            }
+        } catch let error {
+            print(error.localizedDescription)
         }
+        requestAuthorization()
+        
+        view.addSubview(showPickerButton)
+        view.addSubview(startMonitorButton)
+        NSLayoutConstraint.activate([
+            showPickerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            showPickerButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            showPickerButton.widthAnchor.constraint(equalToConstant: 100),
+            showPickerButton.heightAnchor.constraint(equalToConstant: 70),
+            
+            startMonitorButton.topAnchor.constraint(equalTo: showPickerButton.bottomAnchor, constant: 20),
+            startMonitorButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            showPickerButton.widthAnchor.constraint(equalToConstant: 100),
+            showPickerButton.heightAnchor.constraint(equalToConstant: 70),
+            
+        ])
+        
+        
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-            self.openSwiftUIView()
-        })
+    @objc
+    func startMonitor() {
+        print(#function)
+        // 모니터링 하는 시간  범위
+        let schedule = DeviceActivitySchedule(
+            intervalStart: DateComponents(hour: 0, minute: 0),
+            intervalEnd: DateComponents(hour: 23, minute: 59),
+            repeats: true
+        )
+        let center = DeviceActivityCenter()
+        do {
+            try center.startMonitoring(.youtube, during: schedule)
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
-    
     func requestAuthorization() {
         let authorizationStatus = AuthorizationCenter.shared.authorizationStatus
         
@@ -54,8 +104,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @objc
     private func openSwiftUIView() {
         let hostingController = UIHostingController(rootView: ExampleView())
+        
         hostingController.sizingOptions = .preferredContentSize
         hostingController.modalPresentationStyle = .popover
         self.present(hostingController, animated: true)

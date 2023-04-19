@@ -7,20 +7,29 @@
 
 import SwiftUI
 import FamilyControls
-
-struct ExampleView: View {
-    @State var selection = FamilyActivitySelection()
-
-    var body: some View {
-            VStack {
-                FamilyActivityPicker(selection: $selection)
-            }
-            .onChange(of: selection) { newSelection in
-                let applications = selection.applications
-                let categories = selection.categories
-                let webDomains = selection.webDomains
-            }
+class MyModel: ObservableObject {
+    @State var selectionToDiscourage = FamilyActivitySelection() {
+        didSet {
+            print(selectionToDiscourage)
         }
+    }
+    
+}
+struct ExampleView: View {
+    @StateObject var model = MyModel()
+    @State var isPresent: Bool = false
+    @State var selection = FamilyActivitySelection()
+    
+    var body: some View {
+        VStack {
+            Button("plz select block app") { isPresent = true }
+                .familyActivityPicker(isPresented: $isPresent,
+                                      selection: $selection)
+                .onChange(of: selection) { newSelection in
+                    
+                }
+        }
+    }
 }
 
 //struct ExampleView_Previews: PreviewProvider {

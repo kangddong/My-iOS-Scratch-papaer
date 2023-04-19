@@ -15,15 +15,16 @@ class MyMonitor: DeviceActivityMonitor {
     
     override func intervalDidStart(for activity: DeviceActivityName) {
         super.intervalDidStart(for: activity)
-//        let applications
-
-//        store.shield.applications = applications.isEmpty ? nil : applications
-//        let model = MyModel()
-//        let applications =
+        print(#function)
+        
+        let model = MyModel()
+        let applicationsTokens = model.selectionToDiscourage.applicationTokens
+        store.shield.applications = applicationsTokens.isEmpty ? nil : applicationsTokens
     }
     
     override func intervalDidEnd(for activity: DeviceActivityName) {
         super.intervalDidEnd(for: activity)
+        print(#function)
         
         store.shield.applications = nil
     }
