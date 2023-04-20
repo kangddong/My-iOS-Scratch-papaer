@@ -12,8 +12,9 @@
 - [서버에 이미지를 업로드하는 과정에서 metadata의 orientaion으로 인해 의도치않은 사진 결과 값을 해결해보기](/UIKit/ImageOrientationFix)
 - [SnapKit를 사용해보며 경험해보기](/UIKit/Library_Exercises/PracticeSnapKit)
 - [then 사용해보며 경험해보기](/UIKit/Library_Exercises/thenPractice)
-- [UITableView 기본 다지며 여러가지 사용해보기](/UIKit/Library_Exercises/testTableView)
-- [UIPageViewController 사용해보면서 기본 다지기](/UIKit/Library_Exercises/uipageVCTest)
+- [UITableView 기본 다지며 여러가지 사용해보기](/UIKit/testTableView)
+- [UIPageViewController 사용해보면서 기본 다지기](/UIKit/uipageVCTest)
+- [UIPasteboard 사용해보면서 기본 다지기](/UIKit/ExercisePasteString)
 
 # SwiftUI
 - [ActivityKit을 이용한 iOS 16 Dynamic Island, Lock Screen 배민 클론코딩 도전기](/SwiftUI/ActivityKitPractice)
