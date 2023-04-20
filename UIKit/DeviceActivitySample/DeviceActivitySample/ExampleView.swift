@@ -20,6 +20,10 @@ struct ExampleView: View {
                 isDiscouragedPresented = true
             }
             .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
+            
+            Button("Select Apps to Discourage") {
+                MyModel.shared.disableShieldRestrictions()
+            }
         }
         .onChange(of: model.selectionToDiscourage) { newSelection in
             MyModel.shared.setShieldRestrictions()

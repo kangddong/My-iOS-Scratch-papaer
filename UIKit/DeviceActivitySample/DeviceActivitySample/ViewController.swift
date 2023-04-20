@@ -103,7 +103,11 @@ class ViewController: UIViewController {
     
     @objc
     private func openSwiftUIView() {
-        let hostingController = UIHostingController(rootView: ExampleView())
+        let model = MyModel.shared
+        let hostingController = UIHostingController(
+            rootView: ExampleView()
+                .environmentObject(model)
+        )
         
         hostingController.sizingOptions = .preferredContentSize
         hostingController.modalPresentationStyle = .popover
