@@ -19,26 +19,15 @@ class BViewController: UIViewController {
     }
     
     private var tableViewDataSource: [String] = [
-        "테스트 A",
-        "테스트 B"
+        "Notices".localized,
+        "Events".localized,
+        "Helps".localized,
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension BViewController: UITableViewDelegate, UITableViewDataSource {
@@ -56,5 +45,14 @@ extension BViewController: UITableViewDelegate, UITableViewDataSource {
         textLabel?.text = cellTitle
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc: UIViewController = NoticesViewController()
+        let convertedString: String = (tableViewDataSource[indexPath.row] as NSString) as String
+        NoticesViewController().setLocalizedTitle(convertedString)
+        
+        self.present(vc, animated: true)
     }
 }

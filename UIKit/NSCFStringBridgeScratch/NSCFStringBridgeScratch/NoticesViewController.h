@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NoticesViewController : UIViewController
 
+- (void) setLocalizedTitle:(NSString*)localizedTitle;
+
 @end
 
 NS_ASSUME_NONNULL_END

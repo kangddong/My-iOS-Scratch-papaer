@@ -15,17 +15,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor redColor];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) setLocalizedTitle:(NSString*)localizedTitle {
+    NSLog(@"%@", localizedTitle);
+    
+    if ( [localizedTitle isEqualToString:NSLocalizedString(@"Notices", nil)]) {
+        NSLog(@"Equal");
+    } else {
+        NSLog(@"Not Equal");
+    }
+    
 }
-*/
 
 @end
