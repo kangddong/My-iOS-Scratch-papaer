@@ -17,6 +17,7 @@
 		367D40402A01F60600156351 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367D403F2A01F60600156351 /* Util.swift */; };
 		EF6ED5CA2A0770EA004E2B96 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF6ED5C92A0770EA004E2B96 /* Localizable.strings */; };
 		EF6ED5CC2A07732D004E2B96 /* Ex_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED5CB2A07732D004E2B96 /* Ex_String.swift */; };
+		EF6ED5DA2A0779F9004E2B96 /* NoticesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED5D92A0779F9004E2B96 /* NoticesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,9 @@
 		367D403F2A01F60600156351 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		EF6ED5C92A0770EA004E2B96 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		EF6ED5CB2A07732D004E2B96 /* Ex_String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex_String.swift; sourceTree = "<group>"; };
+		EF6ED5D72A0779F9004E2B96 /* NSCFStringBridgeScratch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCFStringBridgeScratch-Bridging-Header.h"; sourceTree = "<group>"; };
+		EF6ED5D82A0779F9004E2B96 /* NoticesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticesViewController.h; sourceTree = "<group>"; };
+		EF6ED5D92A0779F9004E2B96 /* NoticesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,9 @@
 				367D403F2A01F60600156351 /* Util.swift */,
 				EF6ED5C92A0770EA004E2B96 /* Localizable.strings */,
 				EF6ED5CB2A07732D004E2B96 /* Ex_String.swift */,
+				EF6ED5D82A0779F9004E2B96 /* NoticesViewController.h */,
+				EF6ED5D92A0779F9004E2B96 /* NoticesViewController.m */,
+				EF6ED5D72A0779F9004E2B96 /* NSCFStringBridgeScratch-Bridging-Header.h */,
 			);
 			path = NSCFStringBridgeScratch;
 			sourceTree = "<group>";
@@ -111,6 +118,7 @@
 				TargetAttributes = {
 					367D40232A01EB7000156351 = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -153,6 +161,7 @@
 			files = (
 				367D40282A01EB7000156351 /* AppDelegate.swift in Sources */,
 				367D403E2A01EE8B00156351 /* BViewController.swift in Sources */,
+				EF6ED5DA2A0779F9004E2B96 /* NoticesViewController.m in Sources */,
 				367D40402A01F60600156351 /* Util.swift in Sources */,
 				367D402A2A01EB7000156351 /* SceneDelegate.swift in Sources */,
 				367D403C2A01ECD200156351 /* MainTabBarVC.swift in Sources */,
@@ -301,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -318,6 +328,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com..NSCFStringBridgeScratch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NSCFStringBridgeScratch/NSCFStringBridgeScratch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -328,6 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -345,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com..NSCFStringBridgeScratch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "NSCFStringBridgeScratch/NSCFStringBridgeScratch-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
