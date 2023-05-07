@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  NSCFStringBridgeScratch
+
+  Created by 강동영 on 2023/05/07.
+  
+*/
+
+"Notices" = "공지사항";
+"Events" = "이벤트";
+"Helps" = "도움말";
