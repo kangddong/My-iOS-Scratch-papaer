@@ -18,6 +18,7 @@
 		EF6ED5CA2A0770EA004E2B96 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF6ED5C92A0770EA004E2B96 /* Localizable.strings */; };
 		EF6ED5CC2A07732D004E2B96 /* Ex_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED5CB2A07732D004E2B96 /* Ex_String.swift */; };
 		EF6ED5DA2A0779F9004E2B96 /* NoticesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED5D92A0779F9004E2B96 /* NoticesViewController.m */; };
+		EF6ED5DD2A077D75004E2B96 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED5DC2A077D75004E2B96 /* MainNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		EF6ED5D72A0779F9004E2B96 /* NSCFStringBridgeScratch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCFStringBridgeScratch-Bridging-Header.h"; sourceTree = "<group>"; };
 		EF6ED5D82A0779F9004E2B96 /* NoticesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticesViewController.h; sourceTree = "<group>"; };
 		EF6ED5D92A0779F9004E2B96 /* NoticesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticesViewController.m; sourceTree = "<group>"; };
+		EF6ED5DB2A077D75004E2B96 /* MainNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		EF6ED5DC2A077D75004E2B96 /* MainNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				EF6ED5D82A0779F9004E2B96 /* NoticesViewController.h */,
 				EF6ED5D92A0779F9004E2B96 /* NoticesViewController.m */,
 				EF6ED5D72A0779F9004E2B96 /* NSCFStringBridgeScratch-Bridging-Header.h */,
+				EF6ED5DB2A077D75004E2B96 /* MainNavigationController.h */,
+				EF6ED5DC2A077D75004E2B96 /* MainNavigationController.m */,
 			);
 			path = NSCFStringBridgeScratch;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				367D40402A01F60600156351 /* Util.swift in Sources */,
 				367D402A2A01EB7000156351 /* SceneDelegate.swift in Sources */,
 				367D403C2A01ECD200156351 /* MainTabBarVC.swift in Sources */,
+				EF6ED5DD2A077D75004E2B96 /* MainNavigationController.m in Sources */,
 				EF6ED5CC2A07732D004E2B96 /* Ex_String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +319,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NSCFStringBridgeScratch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -343,6 +350,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NSCFStringBridgeScratch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

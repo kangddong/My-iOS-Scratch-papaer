@@ -50,8 +50,8 @@ extension BViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vc: UIViewController = NoticesViewController()
-        let convertedString: String = (tableViewDataSource[indexPath.row] as NSString) as String
-        NoticesViewController().setLocalizedTitle(convertedString)
+        let convertedString: NSString = NSString(string: tableViewDataSource[indexPath.row])
+        NoticesViewController().setLocalizedTitle(convertedString as String)
         
         self.present(vc, animated: true)
     }
