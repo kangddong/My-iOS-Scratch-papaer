@@ -20,7 +20,7 @@ class PageViewController: UIPageViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.dataSource = self
         self.delegate = self
         // 첫 번째 페이지를 기본 페이지로 설정
@@ -32,6 +32,7 @@ class PageViewController: UIPageViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         //setViewControllers(<#T##viewControllers: [UIViewController]?##[UIViewController]?#>, direction: .forward, animated: true)
     }
 
@@ -56,7 +57,8 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
         guard vcArray.count > prevIndex else { return nil }
 
         print(#function, vcArray[prevIndex])
-        return vcArray[prevIndex]
+        return nil
+//        return vcArray[prevIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
@@ -76,7 +78,8 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
         guard vcArray.count > nextIndex else { return nil }
 
         print(#function, vcArray[nextIndex])
-        return vcArray[nextIndex]
+        return nil
+//        return vcArray[nextIndex]
     }
     
 }
