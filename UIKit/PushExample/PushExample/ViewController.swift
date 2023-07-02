@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         let center = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
-        content.title = "Tublock"
+        content.title = "PushExample"
         content.body = "Every Tuesday at 2pm, Every Tuesday at 2pm"
         
         var dateComponents = DateComponents()

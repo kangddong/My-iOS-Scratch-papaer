@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        UIApplication.shared.registerForRemoteNotifications()
+        UNUserNotificationCenter.current().delegate = self
+        
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { isGranted, error in
             
@@ -44,3 +47,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let stringToken = deviceToken.map { data in String(format: "%02.2hhx", data) }.joined()
+        print("deviceToken: \(stringToken)")
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("원격 노티피케이션 사용불가 !! : \(error.localizedDescription)")
+    }
+}
