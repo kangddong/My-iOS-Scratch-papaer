@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36CCAD3F2A57FBB700F2384D /* TwoButtonTabComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CCAD3E2A57FBB600F2384D /* TwoButtonTabComponent.swift */; };
 		36F7B48C2A57F33600E7D34C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7B48B2A57F33600E7D34C /* AppDelegate.swift */; };
 		36F7B48E2A57F33600E7D34C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7B48D2A57F33600E7D34C /* SceneDelegate.swift */; };
 		36F7B4902A57F33600E7D34C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7B48F2A57F33600E7D34C /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36CCAD3E2A57FBB600F2384D /* TwoButtonTabComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonTabComponent.swift; sourceTree = "<group>"; };
 		36F7B4882A57F33600E7D34C /* refactoringCustomTabView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = refactoringCustomTabView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F7B48B2A57F33600E7D34C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36F7B48D2A57F33600E7D34C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				36F7B4942A57F33700E7D34C /* Assets.xcassets */,
 				36F7B4962A57F33700E7D34C /* LaunchScreen.storyboard */,
 				36F7B4992A57F33700E7D34C /* Info.plist */,
+				36CCAD3E2A57FBB600F2384D /* TwoButtonTabComponent.swift */,
 			);
 			path = refactoringCustomTabView;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CCAD3F2A57FBB700F2384D /* TwoButtonTabComponent.swift in Sources */,
 				36F7B4902A57F33600E7D34C /* ViewController.swift in Sources */,
 				36F7B4A42A57F50900E7D34C /* LeftTabViewController.swift in Sources */,
 				36F7B4A62A57F5BD00E7D34C /* RightTabViewController.swift in Sources */,
