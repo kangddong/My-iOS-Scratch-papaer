@@ -57,4 +57,22 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("원격 노티피케이션 사용불가 !! : \(error.localizedDescription)")
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+        print(#function)
+        
+        if let imageURLString = notification.request.content.userInfo["image"] as? String {
+            print("imageURLString: \(imageURLString)")
+        }
+        
+        
+        return [.badge, .banner, .sound]
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+        print(#function)
+        if let imageURLString = response.notification.request.content.userInfo["image"] as? String {
+            print("imageURLString: \(imageURLString)")
+        }
+    }
 }
