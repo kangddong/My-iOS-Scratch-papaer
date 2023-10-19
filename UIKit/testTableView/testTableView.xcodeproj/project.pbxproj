@@ -42,7 +42,6 @@
 		364540602959773400F42E7B = {
 			isa = PBXGroup;
 			children = (
-				364540802959776700F42E7B /* TestTableViewController.swift */,
 				3645406B2959773400F42E7B /* testTableView */,
 				3645406A2959773400F42E7B /* Products */,
 			);
@@ -59,6 +58,7 @@
 		3645406B2959773400F42E7B /* testTableView */ = {
 			isa = PBXGroup;
 			children = (
+				364540802959776700F42E7B /* TestTableViewController.swift */,
 				3645406C2959773400F42E7B /* AppDelegate.swift */,
 				3645406E2959773400F42E7B /* SceneDelegate.swift */,
 				364540702959773400F42E7B /* ViewController.swift */,
