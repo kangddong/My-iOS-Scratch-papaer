@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     
     private let picker = UIImagePickerController()
     
-    private var imageList: [(image: UIImage, type: String)] = [(image: UIImage(named: "nfc")!, type: "ADD")]
+    private var imageList: [UIImage?] = []
+//    private var imageList: [(image: UIImage, type: String)] = [(image: UIImage(named: "nfc")!, type: "ADD")]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,6 +30,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         print("\(UIScreen.main.bounds.width) UIScreen.main.bounds.width")
         print("didappear")
+        openLibrary()
     }
 
     func initUI() {
@@ -104,7 +106,7 @@ class ViewController: UIViewController {
     }
     
     private func insertImageList(image: UIImage) {
-        self.imageList.insert((image: image, type: "IMG"), at: imageList.count - 1)
+//        self.imageList.insert((image: image, type: "IMG"), at: imageList.count - 1)
         
         if imageList.count == 4 {
             self.imageList.removeLast()
@@ -118,16 +120,7 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        var count = 0
-        imageList.forEach { (image, type) in
-            if type == "IMG" {
-                count += 1
-            }
-            let hidden = (count == 0) ? true : false
-            imageCollectionView.isHidden = hidden
-        }
         
-        //imageCollectionView.isHidden = true
         return imageList.count
     }
     
@@ -135,15 +128,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
         let tupleItem = imageList[indexPath.row]
-
         
-        if !tupleItem.type.contains("IMG") {
-            
-        }
-        if tupleItem.type == "ADD" {
-            cell.configAddView(image: tupleItem.image, hidden: true)
-        } else {
-            cell.configImageView(image: tupleItem.image, hidden: false)
+        DispatchQueue.main.async {
+            cell.image.image = tupleItem
         }
         
         return cell
@@ -169,7 +156,17 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return size
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let image = imageList[indexPath.row]
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ButtonTestViewController") as! ButtonTestViewController
+        
+        DispatchQueue.main.async {
+            vc.testImageview.image = image
+        }
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 
@@ -187,58 +184,60 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
             uploadImage = selectedImage
         }
         
-        switch picker.sourceType {
-        case .photoLibrary:
-            if let assetPath = info[.imageURL] as? URL {
-                let URLString = assetPath.absoluteString.lowercased()
-                
-                if (URLString.hasSuffix("png")) {
-                    type = "png"
-                } else if (URLString.hasSuffix("jpeg")) {
-                    type = "jpeg"
-                } else if (URLString.hasSuffix("jpg")) {
-                    type = "jpeg"
-                } else if (URLString.hasSuffix("gif")) {
-                    NSLog("hasSuffix gif", "%@")
-                    self.dismiss(animated: true, completion: nil)
-                    return
-                } else {
-                    NSLog("Unknown img Type", "%@")
-                    self.dismiss(animated: true, completion: nil)
-                    return
-                }
-                //viewModel?.converImageToData(image: uploadImage, type: type)
-                self.converImageToData(image: uploadImage, type: type)
-            }
-            
-        case .camera:
-            
-            let imgName = UUID().uuidString+".jpeg"
-            let documentDirectory = NSTemporaryDirectory()
-            let localPath = documentDirectory.appending(imgName)
-            if let imgData = uploadImage?.jpegData(compressionQuality: 0.3) {
-                
-                /*
-                 camera에서 take pic 한 Image를 rotate 90 angle 하는 이유
-                 참조: https://developer.apple.com/documentation/uikit/uiimage/orientation
-                 the camera sensor's native landscape orientation
-                 센서를 통해 찍은 사진은 it automatically applies a 90° rotation before displaying the image data 된다고한다.
-                 */
-                
-                uploadImage = UIImage(data: imgData)!.rotate(degrees: 90)
-                type = "jpeg"
-            } else {
-                self.dismiss(animated: true, completion: nil)
-            }
-            
-            //viewModel?.converImageToData(image: uploadImage, type: type)
-            self.converImageToData(image: uploadImage, type: type)
-            
-        case .savedPhotosAlbum:
-            return
-        @unknown default:
-            return
-        }
+        imageList.append(uploadImage?.fixOrientation())
+        imageCollectionView.reloadData()
+//        switch picker.sourceType {
+//        case .photoLibrary:
+//            if let assetPath = info[.imageURL] as? URL {
+//                let URLString = assetPath.absoluteString.lowercased()
+//                
+//                if (URLString.hasSuffix("png")) {
+//                    type = "png"
+//                } else if (URLString.hasSuffix("jpeg")) {
+//                    type = "jpeg"
+//                } else if (URLString.hasSuffix("jpg")) {
+//                    type = "jpeg"
+//                } else if (URLString.hasSuffix("gif")) {
+//                    NSLog("hasSuffix gif", "%@")
+//                    self.dismiss(animated: true, completion: nil)
+//                    return
+//                } else {
+//                    NSLog("Unknown img Type", "%@")
+//                    self.dismiss(animated: true, completion: nil)
+//                    return
+//                }
+//                //viewModel?.converImageToData(image: uploadImage, type: type)
+//                self.converImageToData(image: uploadImage, type: type)
+//            }
+//            
+//        case .camera:
+//            
+//            let imgName = UUID().uuidString+".jpeg"
+//            let documentDirectory = NSTemporaryDirectory()
+//            let localPath = documentDirectory.appending(imgName)
+//            if let imgData = uploadImage?.jpegData(compressionQuality: 0.3) {
+//                
+//                /*
+//                 camera에서 take pic 한 Image를 rotate 90 angle 하는 이유
+//                 참조: https://developer.apple.com/documentation/uikit/uiimage/orientation
+//                 the camera sensor's native landscape orientation
+//                 센서를 통해 찍은 사진은 it automatically applies a 90° rotation before displaying the image data 된다고한다.
+//                 */
+//                
+//                uploadImage = UIImage(data: imgData)!.rotate(degrees: 90)
+//                type = "jpeg"
+//            } else {
+//                self.dismiss(animated: true, completion: nil)
+//            }
+//            
+//            //viewModel?.converImageToData(image: uploadImage, type: type)
+//            self.converImageToData(image: uploadImage, type: type)
+//            
+//        case .savedPhotosAlbum:
+//            return
+//        @unknown default:
+//            return
+//        }
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -247,7 +246,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     }
     
     private func openLibrary() {
-        
+        picker.delegate = self
         picker.sourceType = .photoLibrary
         present(picker, animated: true, completion: nil)
     }
