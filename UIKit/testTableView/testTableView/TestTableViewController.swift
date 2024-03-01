@@ -20,6 +20,7 @@ class TestTableViewController: UITableViewController {
         }
         tableView.register(TestTableViewCell.self, forCellReuseIdentifier: TestTableViewCell.reuseIdentifier)
         tableView.separatorStyle = .none
+//        tableView.separatorInset = .init(top: 16.0, left: 16, bottom: 16, right: 16)
 //        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.rowHeight = UITableView.automaticDimension
         tableView.backgroundColor = .lightGray
@@ -113,9 +114,9 @@ class TestTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        label.layer.borderWidth = 1
-        label.layer.borderColor = UIColor.red.cgColor
+        label.lineBreakMode = .byCharWrapping
+//        label.layer.borderWidth = 1
+//        label.layer.borderColor = UIColor.red.cgColor
         return label
     }()
     
@@ -130,9 +131,10 @@ class TestTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         print("init")
         self.contentView.addSubview(testLabel)
-        
-        let bottomAnchor = testLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -20)
-        bottomAnchor.priority = UILayoutPriority(250)
+        contentView.layer.borderWidth = 1
+        contentView.layer.borderColor = UIColor.red.cgColor
+        let bottomAnchor = testLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0)
+//        bottomAnchor.priority = UILayoutPriority(1000)
         NSLayoutConstraint.activate([
             testLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 20),
             testLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 20),
