@@ -19,6 +19,8 @@
 		6E7B7C37277AF33E00D68188 /* switfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7B7C36277AF33E00D68188 /* switfUITests.swift */; };
 		6E7B7C41277AF33E00D68188 /* switfUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7B7C40277AF33E00D68188 /* switfUIUITests.swift */; };
 		6E7B7C43277AF33E00D68188 /* switfUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7B7C42277AF33E00D68188 /* switfUIUITestsLaunchTests.swift */; };
+		B59C5E4A2B8325CB00E9583C /* OnTapGestureBlinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C5E492B8325CB00E9583C /* OnTapGestureBlinkView.swift */; };
+		B59C5E4C2B833A1900E9583C /* ButtonTouchEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C5E4B2B833A1900E9583C /* ButtonTouchEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		6E7B7C3C277AF33E00D68188 /* switfUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = switfUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7B7C40277AF33E00D68188 /* switfUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = switfUIUITests.swift; sourceTree = "<group>"; };
 		6E7B7C42277AF33E00D68188 /* switfUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = switfUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B59C5E492B8325CB00E9583C /* OnTapGestureBlinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTapGestureBlinkView.swift; sourceTree = "<group>"; };
+		B59C5E4B2B833A1900E9583C /* ButtonTouchEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTouchEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				367D4E1E296FDD63002C9C09 /* AssetMenuGridView.swift */,
 				36D6240528C6D7200062BB7E /* QRCodeReaderView.swift */,
 				36AA4B0528EEB7B0004C4EE4 /* swiftUI.docc */,
+				B59C5E492B8325CB00E9583C /* OnTapGestureBlinkView.swift */,
+				B59C5E4B2B833A1900E9583C /* ButtonTouchEventView.swift */,
 			);
 			path = switfUI;
 			sourceTree = "<group>";
@@ -274,11 +280,13 @@
 			files = (
 				6E7B7C28277AF33A00D68188 /* ContentView.swift in Sources */,
 				6E7B7C26277AF33A00D68188 /* switfUIApp.swift in Sources */,
+				B59C5E4A2B8325CB00E9583C /* OnTapGestureBlinkView.swift in Sources */,
 				367D4E1F296FDD63002C9C09 /* AssetMenuGridView.swift in Sources */,
 				36AA4B0628EEB7B0004C4EE4 /* swiftUI.docc in Sources */,
 				36DD82B428C5BFA200622DE5 /* AppTabNavigation.swift in Sources */,
 				36DD82B628C5C02900622DE5 /* ExampleView.swift in Sources */,
 				36D6240628C6D7200062BB7E /* QRCodeReaderView.swift in Sources */,
+				B59C5E4C2B833A1900E9583C /* ButtonTouchEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +456,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,7 +487,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
