@@ -53,8 +53,7 @@ class CustomCollectionFooterView: UICollectionReusableView {
     }
 }
 
-class ViewController: UIViewController {
-    
+final class ViewController: UIViewController {
     enum SectionType {
         case none
         case header
@@ -66,13 +65,25 @@ class ViewController: UIViewController {
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
-        collectionView.register(CustomCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CustomCollectionHeaderView.identifier)
-        collectionView.register(CustomCollectionFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CustomCollectionFooterView.identifier)
+        collectionView.register(
+            CustomCollectionViewCell.self,
+            forCellWithReuseIdentifier: CustomCollectionViewCell.identifier
+        )
+        collectionView.register(
+            CustomCollectionHeaderView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: CustomCollectionHeaderView.identifier
+        )
+        collectionView.register(
+            CustomCollectionFooterView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+            withReuseIdentifier: CustomCollectionFooterView.identifier
+        )
         return collectionView
     }()
 
-    var sectionList: [SectionType] = [.none, .header, .footer]
+//    private var sectionList: [SectionType] = [.none, .header, .footer]
+    private var sectionList: [SectionType] = [.none, .header]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,13 +101,8 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDelegate {
-    
-}
-
-extension ViewController: UICollectionViewDataSource {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         switch sectionList[section] {
         case .none:
             return 1
@@ -108,29 +114,24 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as? CustomCollectionViewCell else {
-            return UICollectionViewCell()
-        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath)
+        guard let convertedCell = cell as? CustomCollectionViewCell else { return cell }
         
         switch sectionList[indexPath.section] {
         case .none:
-            cell.backgroundColor = .systemBlue
-            return cell
+            convertedCell.backgroundColor = .systemBlue
+            return convertedCell
         case .header:
-            cell.backgroundColor = .systemRed
-            return cell
+            convertedCell.backgroundColor = .systemRed
+            return convertedCell
         case .footer:
-            cell.backgroundColor = .systemYellow
-            return cell
+            convertedCell.backgroundColor = .systemYellow
+            return convertedCell
         }
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
         switch sectionList[indexPath.section] {
-
         case .none:
             if kind == UICollectionView.elementKindSectionHeader {
                 guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CustomCollectionHeaderView.identifier, for: indexPath) as? CustomCollectionHeaderView else {
