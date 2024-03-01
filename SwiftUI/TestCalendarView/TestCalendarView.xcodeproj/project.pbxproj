@@ -11,6 +11,9 @@
 		B52050752B91F9B80006E63E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050742B91F9B80006E63E /* ContentView.swift */; };
 		B52050772B91F9B90006E63E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52050762B91F9B90006E63E /* Assets.xcassets */; };
 		B520507A2B91F9B90006E63E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52050792B91F9B90006E63E /* Preview Assets.xcassets */; };
+		B52050812B91FAC50006E63E /* TimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050802B91FAC50006E63E /* TimeTableView.swift */; };
+		B52050832B91FD160006E63E /* DayOfWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050822B91FD160006E63E /* DayOfWeekView.swift */; };
+		B52050852B9206FF0006E63E /* DaysOfCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050842B9206FF0006E63E /* DaysOfCalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		B52050742B91F9B80006E63E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B52050762B91F9B90006E63E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B52050792B91F9B90006E63E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B52050802B91FAC50006E63E /* TimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableView.swift; sourceTree = "<group>"; };
+		B52050822B91FD160006E63E /* DayOfWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeekView.swift; sourceTree = "<group>"; };
+		B52050842B9206FF0006E63E /* DaysOfCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfCalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 				B52050742B91F9B80006E63E /* ContentView.swift */,
 				B52050762B91F9B90006E63E /* Assets.xcassets */,
 				B52050782B91F9B90006E63E /* Preview Content */,
+				B52050872B920B940006E63E /* Calendar */,
 			);
 			path = TestCalendarView;
 			sourceTree = "<group>";
@@ -65,6 +72,16 @@
 				B52050792B91F9B90006E63E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B52050872B920B940006E63E /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				B52050802B91FAC50006E63E /* TimeTableView.swift */,
+				B52050822B91FD160006E63E /* DayOfWeekView.swift */,
+				B52050842B9206FF0006E63E /* DaysOfCalendarView.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52050832B91FD160006E63E /* DayOfWeekView.swift in Sources */,
 				B52050752B91F9B80006E63E /* ContentView.swift in Sources */,
 				B52050732B91F9B80006E63E /* TestCalendarViewApp.swift in Sources */,
+				B52050852B9206FF0006E63E /* DaysOfCalendarView.swift in Sources */,
+				B52050812B91FAC50006E63E /* TimeTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
