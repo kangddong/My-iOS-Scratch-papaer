@@ -84,7 +84,7 @@ struct DaysOfCalendarView: View {
         }
     }
     
-    func getArrayOfDays() -> [[String]] {
+    private func getArrayOfDays() -> [[String]] {
         let calendar = Calendar.current
         
         let month = calendar.component(.month, from: yearAndMonth)
@@ -114,7 +114,7 @@ struct DaysOfCalendarView: View {
         return calendarDays
     }
     
-    func checkIfItsThisMonth() -> Bool {
+    private func checkIfItsThisMonth() -> Bool {
         let date = Date()
         let calendar = Calendar.current
         
@@ -127,7 +127,7 @@ struct DaysOfCalendarView: View {
         return year1 == year2 && month1 == month2
     }
     
-    func getTodayToString() -> String {
+    private func getTodayToString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "d"
         return dateFormatter.string(from: Date())

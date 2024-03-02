@@ -14,6 +14,7 @@
 		B52050812B91FAC50006E63E /* TimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050802B91FAC50006E63E /* TimeTableView.swift */; };
 		B52050832B91FD160006E63E /* DayOfWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050822B91FD160006E63E /* DayOfWeekView.swift */; };
 		B52050852B9206FF0006E63E /* DaysOfCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050842B9206FF0006E63E /* DaysOfCalendarView.swift */; };
+		B52050892B9350AA0006E63E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52050882B9350AA0006E63E /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B52050802B91FAC50006E63E /* TimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableView.swift; sourceTree = "<group>"; };
 		B52050822B91FD160006E63E /* DayOfWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeekView.swift; sourceTree = "<group>"; };
 		B52050842B9206FF0006E63E /* DaysOfCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfCalendarView.swift; sourceTree = "<group>"; };
+		B52050882B9350AA0006E63E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				B52050802B91FAC50006E63E /* TimeTableView.swift */,
 				B52050822B91FD160006E63E /* DayOfWeekView.swift */,
 				B52050842B9206FF0006E63E /* DaysOfCalendarView.swift */,
+				B52050882B9350AA0006E63E /* CalendarView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			files = (
 				B52050832B91FD160006E63E /* DayOfWeekView.swift in Sources */,
 				B52050752B91F9B80006E63E /* ContentView.swift in Sources */,
+				B52050892B9350AA0006E63E /* CalendarView.swift in Sources */,
 				B52050732B91F9B80006E63E /* TestCalendarViewApp.swift in Sources */,
 				B52050852B9206FF0006E63E /* DaysOfCalendarView.swift in Sources */,
 				B52050812B91FAC50006E63E /* TimeTableView.swift in Sources */,
