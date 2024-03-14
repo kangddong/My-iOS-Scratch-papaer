@@ -22,6 +22,8 @@ final class ViewController: UIViewController {
         addButtonActions()
         addTapgestures()
         result()
+        print("stackView.accessibilityIdentifier: \(stackView.accessibilityIdentifier)")
+        print("stackView.accessibilityIdentifier: \(stackView.tag)")
     }
 
     private func result() {

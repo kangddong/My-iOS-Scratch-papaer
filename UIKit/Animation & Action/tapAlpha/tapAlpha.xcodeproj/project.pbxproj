@@ -13,7 +13,19 @@
 		36E4E141295D3B0C00CBAE96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E4E13F295D3B0C00CBAE96 /* Main.storyboard */; };
 		36E4E143295D3B0D00CBAE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E4E142295D3B0D00CBAE96 /* Assets.xcassets */; };
 		36E4E146295D3B0D00CBAE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E4E144295D3B0D00CBAE96 /* LaunchScreen.storyboard */; };
+		B5772A222BA1DB6200C0EC54 /* tapAlphaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5772A212BA1DB6200C0EC54 /* tapAlphaUITests.swift */; };
+		B5772A242BA1DB6200C0EC54 /* tapAlphaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5772A232BA1DB6200C0EC54 /* tapAlphaUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5772A252BA1DB6200C0EC54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36E4E12E295D3B0C00CBAE96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36E4E135295D3B0C00CBAE96;
+			remoteInfo = tapAlpha;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		36E4E136295D3B0C00CBAE96 /* tapAlpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tapAlpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,20 @@
 		36E4E142295D3B0D00CBAE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36E4E145295D3B0D00CBAE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36E4E147295D3B0D00CBAE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5772A1F2BA1DB6200C0EC54 /* tapAlphaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tapAlphaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5772A212BA1DB6200C0EC54 /* tapAlphaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tapAlphaUITests.swift; sourceTree = "<group>"; };
+		B5772A232BA1DB6200C0EC54 /* tapAlphaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tapAlphaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		36E4E133295D3B0C00CBAE96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5772A1C2BA1DB6200C0EC54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				36E4E138295D3B0C00CBAE96 /* tapAlpha */,
+				B5772A202BA1DB6200C0EC54 /* tapAlphaUITests */,
 				36E4E137295D3B0C00CBAE96 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				36E4E136295D3B0C00CBAE96 /* tapAlpha.app */,
+				B5772A1F2BA1DB6200C0EC54 /* tapAlphaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +89,15 @@
 				36E4E147295D3B0D00CBAE96 /* Info.plist */,
 			);
 			path = tapAlpha;
+			sourceTree = "<group>";
+		};
+		B5772A202BA1DB6200C0EC54 /* tapAlphaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5772A212BA1DB6200C0EC54 /* tapAlphaUITests.swift */,
+				B5772A232BA1DB6200C0EC54 /* tapAlphaUITestsLaunchTests.swift */,
+			);
+			path = tapAlphaUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +120,24 @@
 			productReference = 36E4E136295D3B0C00CBAE96 /* tapAlpha.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B5772A1E2BA1DB6200C0EC54 /* tapAlphaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5772A292BA1DB6200C0EC54 /* Build configuration list for PBXNativeTarget "tapAlphaUITests" */;
+			buildPhases = (
+				B5772A1B2BA1DB6200C0EC54 /* Sources */,
+				B5772A1C2BA1DB6200C0EC54 /* Frameworks */,
+				B5772A1D2BA1DB6200C0EC54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5772A262BA1DB6200C0EC54 /* PBXTargetDependency */,
+			);
+			name = tapAlphaUITests;
+			productName = tapAlphaUITests;
+			productReference = B5772A1F2BA1DB6200C0EC54 /* tapAlphaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,11 +145,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					36E4E135295D3B0C00CBAE96 = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					B5772A1E2BA1DB6200C0EC54 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 36E4E135295D3B0C00CBAE96;
 					};
 				};
 			};
@@ -116,6 +171,7 @@
 			projectRoot = "";
 			targets = (
 				36E4E135295D3B0C00CBAE96 /* tapAlpha */,
+				B5772A1E2BA1DB6200C0EC54 /* tapAlphaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +184,13 @@
 				36E4E146295D3B0D00CBAE96 /* LaunchScreen.storyboard in Resources */,
 				36E4E143295D3B0D00CBAE96 /* Assets.xcassets in Resources */,
 				36E4E141295D3B0C00CBAE96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5772A1D2BA1DB6200C0EC54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +207,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5772A1B2BA1DB6200C0EC54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5772A242BA1DB6200C0EC54 /* tapAlphaUITestsLaunchTests.swift in Sources */,
+				B5772A222BA1DB6200C0EC54 /* tapAlphaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5772A262BA1DB6200C0EC54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36E4E135295D3B0C00CBAE96 /* tapAlpha */;
+			targetProxy = B5772A252BA1DB6200C0EC54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		36E4E13F295D3B0C00CBAE96 /* Main.storyboard */ = {
@@ -334,6 +414,49 @@
 			};
 			name = Release;
 		};
+		B5772A272BA1DB6200C0EC54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arex.tapAlphaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = tapAlpha;
+			};
+			name = Debug;
+		};
+		B5772A282BA1DB6200C0EC54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arex.tapAlphaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = tapAlpha;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -351,6 +474,15 @@
 			buildConfigurations = (
 				36E4E14B295D3B0D00CBAE96 /* Debug */,
 				36E4E14C295D3B0D00CBAE96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5772A292BA1DB6200C0EC54 /* Build configuration list for PBXNativeTarget "tapAlphaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5772A272BA1DB6200C0EC54 /* Debug */,
+				B5772A282BA1DB6200C0EC54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
