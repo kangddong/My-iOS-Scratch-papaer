@@ -7,16 +7,41 @@
 
 import UIKit
 
+extension UNAuthorizationStatus: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .notDetermined: "notDetermined"
+        case .denied: "denied"
+        case .authorized: "authorized"
+        case .provisional: "provisional"
+        case .ephemeral: "ephemeral"
+        }
+    }
+}
 class ViewController: UIViewController {
 
     @IBOutlet weak var immediatelyPushButton: UIButton!
+    @IBOutlet weak var authorizationStatusLabel: UILabel!
+    @IBOutlet weak var requestAuthorizationButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         immediatelyPushButton.addTarget(self, action: #selector(push), for: .touchUpInside)
+        requestAuthorizationButton.addTarget(self, action: #selector(push2), for: .touchUpInside)
+        requestAutorization()
     }
     
+    private func requestAutorization() {
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.getNotificationSettings { setting in
+            print(setting.authorizationStatus)
+            DispatchQueue.main.async {
+                self.authorizationStatusLabel.text = "Push Authorization: " + setting.authorizationStatus.description
+                self.authorizationStatusLabel.sizeToFit()
+            }
+        }
+    }
     @objc
     private func push() {
         print(#function)
@@ -40,6 +65,9 @@ class ViewController: UIViewController {
         center.add(request)
     }
 
-
+    @objc
+    private func push2() {
+        requestAutorization()
+    }
 }
 
