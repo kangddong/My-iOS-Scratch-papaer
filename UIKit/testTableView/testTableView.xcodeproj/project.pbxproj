@@ -14,6 +14,9 @@
 		364540762959773500F42E7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364540752959773500F42E7B /* Assets.xcassets */; };
 		364540792959773500F42E7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364540772959773500F42E7B /* LaunchScreen.storyboard */; };
 		364540812959776700F42E7B /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364540802959776700F42E7B /* TestTableViewController.swift */; };
+		B51FE5992BB2EC000072AE49 /* InnerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51FE5982BB2EC000072AE49 /* InnerTableView.swift */; };
+		B51FE59B2BB325600072AE49 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51FE59A2BB325600072AE49 /* TestTableViewCell.swift */; };
+		B51FE59E2BB325930072AE49 /* InnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51FE59D2BB325930072AE49 /* InnerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		364540782959773500F42E7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3645407A2959773500F42E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		364540802959776700F42E7B /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		B51FE5982BB2EC000072AE49 /* InnerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerTableView.swift; sourceTree = "<group>"; };
+		B51FE59A2BB325600072AE49 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		B51FE59D2BB325930072AE49 /* InnerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +64,9 @@
 		3645406B2959773400F42E7B /* testTableView */ = {
 			isa = PBXGroup;
 			children = (
-				364540802959776700F42E7B /* TestTableViewController.swift */,
-				3645406C2959773400F42E7B /* AppDelegate.swift */,
-				3645406E2959773400F42E7B /* SceneDelegate.swift */,
+				B51FE5A02BB325B10072AE49 /* App */,
+				B51FE59C2BB3257D0072AE49 /* TestTableView */,
+				B51FE59F2BB325A40072AE49 /* InnerTableView */,
 				364540702959773400F42E7B /* ViewController.swift */,
 				364540722959773400F42E7B /* Main.storyboard */,
 				364540752959773500F42E7B /* Assets.xcassets */,
@@ -68,6 +74,33 @@
 				3645407A2959773500F42E7B /* Info.plist */,
 			);
 			path = testTableView;
+			sourceTree = "<group>";
+		};
+		B51FE59C2BB3257D0072AE49 /* TestTableView */ = {
+			isa = PBXGroup;
+			children = (
+				364540802959776700F42E7B /* TestTableViewController.swift */,
+				B51FE59A2BB325600072AE49 /* TestTableViewCell.swift */,
+			);
+			path = TestTableView;
+			sourceTree = "<group>";
+		};
+		B51FE59F2BB325A40072AE49 /* InnerTableView */ = {
+			isa = PBXGroup;
+			children = (
+				B51FE5982BB2EC000072AE49 /* InnerTableView.swift */,
+				B51FE59D2BB325930072AE49 /* InnerTableViewCell.swift */,
+			);
+			path = InnerTableView;
+			sourceTree = "<group>";
+		};
+		B51FE5A02BB325B10072AE49 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3645406C2959773400F42E7B /* AppDelegate.swift */,
+				3645406E2959773400F42E7B /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				364540712959773400F42E7B /* ViewController.swift in Sources */,
+				B51FE59E2BB325930072AE49 /* InnerTableViewCell.swift in Sources */,
 				3645406D2959773400F42E7B /* AppDelegate.swift in Sources */,
+				B51FE5992BB2EC000072AE49 /* InnerTableView.swift in Sources */,
 				3645406F2959773400F42E7B /* SceneDelegate.swift in Sources */,
 				364540812959776700F42E7B /* TestTableViewController.swift in Sources */,
+				B51FE59B2BB325600072AE49 /* TestTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,15 @@
 import UIKit
 
 class TestTableViewController: UITableViewController {
-
+    private enum Section: CaseIterable {
+        case reapeatingCell
+        case nestedTableView
+    }
+    
     let worldClassList = ["BTS", "손흥민", "봉준호", "Rx"]
     let testString = String(repeating: "안녕하세요", count: 10)
     var worldClassList2 = [String]()
+    private var sections: [Section] = Section.allCases
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +24,7 @@ class TestTableViewController: UITableViewController {
             worldClassList2.append(testString)
         }
         tableView.register(TestTableViewCell.self, forCellReuseIdentifier: TestTableViewCell.reuseIdentifier)
+        tableView.register(NestedTableViewCell.self, forCellReuseIdentifier: NestedTableViewCell.reuseIdentifier)
         tableView.separatorStyle = .none
 //        tableView.separatorInset = .init(top: 16.0, left: 16, bottom: 16, right: 16)
 //        tableView.estimatedRowHeight = UITableView.automaticDimension
@@ -35,29 +41,41 @@ class TestTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return worldClassList2.count
+        switch sections[section] {
+        case .reapeatingCell:
+            return worldClassList2.count
+        case .nestedTableView:
+            return 1
+        }
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TestTableViewCell.reuseIdentifier, for: indexPath)
-        guard let convertedCell = cell as? TestTableViewCell else { return cell }
-        convertedCell.setData(title: worldClassList2[indexPath.row])
-        
         print("=============================================")
         print("indexPath: \(indexPath)")
         print("indexPath.section: \(indexPath.section)")
         print("indexPath.row: \(indexPath.row)")
         print("indexPath.item: \(indexPath.item)")
         print("=============================================")
-//        cell.textLabel?.text = worldClassList2[indexPath.row]
+        
+        switch sections[indexPath.section] {
+        case .reapeatingCell:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TestTableViewCell.reuseIdentifier, for: indexPath)
+            guard let convertedCell = cell as? TestTableViewCell else { return cell }
+            convertedCell.setData(title: worldClassList2[indexPath.row])
+            
+    //        cell.textLabel?.text = worldClassList2[indexPath.row]
 
-        return convertedCell
+            return convertedCell
+        case .nestedTableView:
+            let cell = tableView.dequeueReusableCell(withIdentifier: NestedTableViewCell.reuseIdentifier, for: indexPath)
+            guard let convertedCell = cell as? NestedTableViewCell else { return cell }
+//            convertedCell.setData()
+            return convertedCell
+        }
     }
 
     /*
@@ -107,47 +125,63 @@ class TestTableViewController: UITableViewController {
 
 }
 
-class TestTableViewCell: UITableViewCell {
-    static let reuseIdentifier: String = "reuseIdentifier"
+final class NestedTableViewCell: UITableViewCell {
+    static let reuseIdentifier: String = String(describing: NestedTableViewCell.self)
     
-    let testLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
-        label.lineBreakMode = .byCharWrapping
-//        label.layer.borderWidth = 1
-//        label.layer.borderColor = UIColor.red.cgColor
-        return label
+    private let tableView: InnerTableView = {
+        let tableView: InnerTableView = .init(frame: .zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.isScrollEnabled = false
+        return tableView
     }()
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 16.0, left: 16, bottom: 16, right: 16))
-        
-    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        print("init")
-        self.contentView.addSubview(testLabel)
-        contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.red.cgColor
-        let bottomAnchor = testLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0)
-//        bottomAnchor.priority = UILayoutPriority(1000)
-        NSLayoutConstraint.activate([
-            testLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 20),
-            testLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 20),
-            testLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -20),
-            bottomAnchor,
-        ])
+        addSubview()
+        addConstraints()
+        configureTableView()
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError()
     }
     
-    public func setData(title: String) {
-        testLabel.text = title
+    
+    public func setData() {
+        tableView.reloadData()
+    }
+}
+
+extension NestedTableViewCell {
+    private func addSubview() {
+        contentView.addSubview(tableView)
+    }
+    
+    private func addConstraints() {
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor),
+        ])
+    }
+    
+    private func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(InnerTableViewCell.self, forCellReuseIdentifier: InnerTableViewCell.reuseIdentifier)
+    }
+}
+
+extension NestedTableViewCell: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: InnerTableViewCell.reuseIdentifier, for: indexPath)
+        guard let convertedCell = cell as? InnerTableViewCell else { return cell }
+        
+        return convertedCell
     }
 }
