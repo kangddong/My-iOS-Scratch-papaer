@@ -6,17 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B5DEF9EF2DBB7C68009381CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEF9EC2DBB7C68009381CF /* ContentView.swift */; };
+		B5DEF9F02DBB7C68009381CF /* ExNaviSwipeGestureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEF9ED2DBB7C68009381CF /* ExNaviSwipeGestureApp.swift */; };
+		B5DEF9F12DBB7C68009381CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5DEF9E92DBB7C68009381CF /* Preview Assets.xcassets */; };
+		B5DEF9F22DBB7C68009381CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5DEF9EB2DBB7C68009381CF /* Assets.xcassets */; };
+		B5DEF9F42DBB7C69009381CF /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEF9F32DBB7C69009381CF /* CustomNavigationBar.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B5DEF9D82DBB7BF6009381CF /* ExNaviSwipeGesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExNaviSwipeGesture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5DEF9E92DBB7C68009381CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5DEF9EB2DBB7C68009381CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5DEF9EC2DBB7C68009381CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B5DEF9ED2DBB7C68009381CF /* ExNaviSwipeGestureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExNaviSwipeGestureApp.swift; sourceTree = "<group>"; };
+		B5DEF9F32DBB7C69009381CF /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		B5DEF9DA2DBB7BF6009381CF /* ExNaviSwipeGesture */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ExNaviSwipeGesture;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B5DEF9D52DBB7BF6009381CF /* Frameworks */ = {
@@ -32,7 +37,7 @@
 		B5DEF9CF2DBB7BF6009381CF = {
 			isa = PBXGroup;
 			children = (
-				B5DEF9DA2DBB7BF6009381CF /* ExNaviSwipeGesture */,
+				B5DEF9EE2DBB7C68009381CF /* ExNaviSwipeGesture */,
 				B5DEF9D92DBB7BF6009381CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +48,26 @@
 				B5DEF9D82DBB7BF6009381CF /* ExNaviSwipeGesture.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B5DEF9EA2DBB7C68009381CF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B5DEF9E92DBB7C68009381CF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B5DEF9EE2DBB7C68009381CF /* ExNaviSwipeGesture */ = {
+			isa = PBXGroup;
+			children = (
+				B5DEF9F32DBB7C69009381CF /* CustomNavigationBar.swift */,
+				B5DEF9EA2DBB7C68009381CF /* Preview Content */,
+				B5DEF9EB2DBB7C68009381CF /* Assets.xcassets */,
+				B5DEF9EC2DBB7C68009381CF /* ContentView.swift */,
+				B5DEF9ED2DBB7C68009381CF /* ExNaviSwipeGestureApp.swift */,
+			);
+			path = ExNaviSwipeGesture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +84,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				B5DEF9DA2DBB7BF6009381CF /* ExNaviSwipeGesture */,
 			);
 			name = ExNaviSwipeGesture;
 			packageProductDependencies = (
@@ -109,6 +131,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DEF9F12DBB7C68009381CF /* Preview Assets.xcassets in Resources */,
+				B5DEF9F22DBB7C68009381CF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DEF9F42DBB7C69009381CF /* CustomNavigationBar.swift in Sources */,
+				B5DEF9EF2DBB7C68009381CF /* ContentView.swift in Sources */,
+				B5DEF9F02DBB7C68009381CF /* ExNaviSwipeGestureApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
