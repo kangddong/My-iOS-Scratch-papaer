@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B5DEFDE22DC3549E009381CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFDDA2DC3549E009381CF /* AppDelegate.swift */; };
 		B5DEFDE32DC3549E009381CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFDDF2DC3549E009381CF /* SceneDelegate.swift */; };
-		B5DEFDE42DC3549E009381CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFDE02DC3549E009381CF /* ViewController.swift */; };
+		B5DEFDE42DC3549E009381CF /* P2PChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFDE02DC3549E009381CF /* P2PChatViewController.swift */; };
 		B5DEFDE52DC3549E009381CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5DEFDDB2DC3549E009381CF /* Assets.xcassets */; };
 		B5DEFDE72DC3549E009381CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DEFDDE2DC3549E009381CF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -21,7 +21,7 @@
 		B5DEFDDC2DC3549E009381CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5DEFDDD2DC3549E009381CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5DEFDDF2DC3549E009381CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B5DEFDE02DC3549E009381CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5DEFDE02DC3549E009381CF /* P2PChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 				B5DEFDDC2DC3549E009381CF /* Info.plist */,
 				B5DEFDDE2DC3549E009381CF /* LaunchScreen.storyboard */,
 				B5DEFDDF2DC3549E009381CF /* SceneDelegate.swift */,
-				B5DEFDE02DC3549E009381CF /* ViewController.swift */,
+				B5DEFDE02DC3549E009381CF /* P2PChatViewController.swift */,
 			);
 			path = ExP2P;
 			sourceTree = "<group>";
@@ -139,7 +139,7 @@
 			files = (
 				B5DEFDE22DC3549E009381CF /* AppDelegate.swift in Sources */,
 				B5DEFDE32DC3549E009381CF /* SceneDelegate.swift in Sources */,
-				B5DEFDE42DC3549E009381CF /* ViewController.swift in Sources */,
+				B5DEFDE42DC3549E009381CF /* P2PChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +167,7 @@
 				DEVELOPMENT_TEAM = FL4QTRRKMD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExP2P/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "로컬 네트워크 사용하려면요 권한이 필요합니당";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -198,6 +199,7 @@
 				DEVELOPMENT_TEAM = FL4QTRRKMD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ExP2P/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "로컬 네트워크 사용하려면요 권한이 필요합니당";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
