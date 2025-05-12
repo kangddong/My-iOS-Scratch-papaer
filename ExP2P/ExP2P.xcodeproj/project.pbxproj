@@ -12,6 +12,7 @@
 		B5DEFDE42DC3549E009381CF /* P2PChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DEFDE02DC3549E009381CF /* P2PChatViewController.swift */; };
 		B5DEFDE52DC3549E009381CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5DEFDDB2DC3549E009381CF /* Assets.xcassets */; };
 		B5DEFDE72DC3549E009381CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DEFDDE2DC3549E009381CF /* LaunchScreen.storyboard */; };
+		B5E3C03B2DD21BB6000622FD /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3C03A2DD21BB6000622FD /* MultipeerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B5DEFDDD2DC3549E009381CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5DEFDDF2DC3549E009381CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B5DEFDE02DC3549E009381CF /* P2PChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P2PChatViewController.swift; sourceTree = "<group>"; };
+		B5E3C03A2DD21BB6000622FD /* MultipeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B5DEFDDE2DC3549E009381CF /* LaunchScreen.storyboard */,
 				B5DEFDDF2DC3549E009381CF /* SceneDelegate.swift */,
 				B5DEFDE02DC3549E009381CF /* P2PChatViewController.swift */,
+				B5E3C03A2DD21BB6000622FD /* MultipeerManager.swift */,
 			);
 			path = ExP2P;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				B5DEFDE22DC3549E009381CF /* AppDelegate.swift in Sources */,
 				B5DEFDE32DC3549E009381CF /* SceneDelegate.swift in Sources */,
+				B5E3C03B2DD21BB6000622FD /* MultipeerManager.swift in Sources */,
 				B5DEFDE42DC3549E009381CF /* P2PChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
