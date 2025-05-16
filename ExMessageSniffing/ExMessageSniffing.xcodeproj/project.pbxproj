@@ -11,7 +11,35 @@
 		B5E3C0B82DD751CF000622FD /* ExMessageSniffingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3C0B52DD751CF000622FD /* ExMessageSniffingApp.swift */; };
 		B5E3C0B92DD751CF000622FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E3C0B12DD751CF000622FD /* Preview Assets.xcassets */; };
 		B5E3C0BA2DD751CF000622FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E3C0B32DD751CF000622FD /* Assets.xcassets */; };
+		B5E3C0C82DD7798A000622FD /* MessageFilter.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B5E3C0C12DD7798A000622FD /* MessageFilter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B5E3C0D22DD77995000622FD /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3C0CF2DD77995000622FD /* MessageFilterExtension.swift */; };
+		B5E3C0D52DD78764000622FD /* MessageModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5E3C0D32DD78764000622FD /* MessageModel.xcdatamodeld */; };
+		B5E3C0D72DD78773000622FD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3C0D62DD78773000622FD /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5E3C0C62DD7798A000622FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5E3C0982DD751C8000622FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5E3C0C02DD7798A000622FD;
+			remoteInfo = MessageFilter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5E3C0CD2DD7798A000622FD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B5E3C0C82DD7798A000622FD /* MessageFilter.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B5E3C0A02DD751C8000622FD /* ExMessageSniffing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExMessageSniffing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +47,22 @@
 		B5E3C0B32DD751CF000622FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5E3C0B42DD751CF000622FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B5E3C0B52DD751CF000622FD /* ExMessageSniffingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExMessageSniffingApp.swift; sourceTree = "<group>"; };
+		B5E3C0C12DD7798A000622FD /* MessageFilter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessageFilter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E3C0CE2DD77995000622FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E3C0CF2DD77995000622FD /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
+		B5E3C0D42DD78764000622FD /* MessageModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MessageModel.xcdatamodel; sourceTree = "<group>"; };
+		B5E3C0D62DD78773000622FD /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B5E3C09D2DD751C8000622FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E3C0BE2DD7798A000622FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				B5E3C0B62DD751CF000622FD /* ExMessageSniffing */,
+				B5E3C0D02DD77995000622FD /* MessageFilter */,
 				B5E3C0A12DD751C8000622FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				B5E3C0A02DD751C8000622FD /* ExMessageSniffing.app */,
+				B5E3C0C12DD7798A000622FD /* MessageFilter.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,12 +101,23 @@
 		B5E3C0B62DD751CF000622FD /* ExMessageSniffing */ = {
 			isa = PBXGroup;
 			children = (
+				B5E3C0D62DD78773000622FD /* PersistenceController.swift */,
 				B5E3C0B22DD751CF000622FD /* Preview Content */,
 				B5E3C0B32DD751CF000622FD /* Assets.xcassets */,
 				B5E3C0B42DD751CF000622FD /* ContentView.swift */,
 				B5E3C0B52DD751CF000622FD /* ExMessageSniffingApp.swift */,
+				B5E3C0D32DD78764000622FD /* MessageModel.xcdatamodeld */,
 			);
 			path = ExMessageSniffing;
+			sourceTree = "<group>";
+		};
+		B5E3C0D02DD77995000622FD /* MessageFilter */ = {
+			isa = PBXGroup;
+			children = (
+				B5E3C0CE2DD77995000622FD /* Info.plist */,
+				B5E3C0CF2DD77995000622FD /* MessageFilterExtension.swift */,
+			);
+			path = MessageFilter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,10 +130,12 @@
 				B5E3C09C2DD751C8000622FD /* Sources */,
 				B5E3C09D2DD751C8000622FD /* Frameworks */,
 				B5E3C09E2DD751C8000622FD /* Resources */,
+				B5E3C0CD2DD7798A000622FD /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B5E3C0C72DD7798A000622FD /* PBXTargetDependency */,
 			);
 			name = ExMessageSniffing;
 			packageProductDependencies = (
@@ -88,6 +143,25 @@
 			productName = ExMessageSniffing;
 			productReference = B5E3C0A02DD751C8000622FD /* ExMessageSniffing.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B5E3C0C02DD7798A000622FD /* MessageFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E3C0CA2DD7798A000622FD /* Build configuration list for PBXNativeTarget "MessageFilter" */;
+			buildPhases = (
+				B5E3C0BD2DD7798A000622FD /* Sources */,
+				B5E3C0BE2DD7798A000622FD /* Frameworks */,
+				B5E3C0BF2DD7798A000622FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessageFilter;
+			packageProductDependencies = (
+			);
+			productName = MessageFilter;
+			productReference = B5E3C0C12DD7798A000622FD /* MessageFilter.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +174,9 @@
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					B5E3C09F2DD751C8000622FD = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					B5E3C0C02DD7798A000622FD = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -119,6 +196,7 @@
 			projectRoot = "";
 			targets = (
 				B5E3C09F2DD751C8000622FD /* ExMessageSniffing */,
+				B5E3C0C02DD7798A000622FD /* MessageFilter */,
 			);
 		};
 /* End PBXProject section */
@@ -133,6 +211,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5E3C0BF2DD7798A000622FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,11 +226,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5E3C0B72DD751CF000622FD /* ContentView.swift in Sources */,
+				B5E3C0D52DD78764000622FD /* MessageModel.xcdatamodeld in Sources */,
 				B5E3C0B82DD751CF000622FD /* ExMessageSniffingApp.swift in Sources */,
+				B5E3C0D72DD78773000622FD /* PersistenceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E3C0BD2DD7798A000622FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E3C0D22DD77995000622FD /* MessageFilterExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5E3C0C72DD7798A000622FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5E3C0C02DD7798A000622FD /* MessageFilter */;
+			targetProxy = B5E3C0C62DD7798A000622FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B5E3C0AC2DD751CA000622FD /* Debug */ = {
@@ -275,6 +378,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExMessageSniffing/Preview Content\"";
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -303,6 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExMessageSniffing/Preview Content\"";
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -317,6 +422,56 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arex.ExMessageSniffing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5E3C0CB2DD7798A000622FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MessageFilter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MessageFilter;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arex.ExMessageSniffing.MessageFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5E3C0CC2DD7798A000622FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MessageFilter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MessageFilter;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arex.ExMessageSniffing.MessageFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,7 +499,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B5E3C0CA2DD7798A000622FD /* Build configuration list for PBXNativeTarget "MessageFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E3C0CB2DD7798A000622FD /* Debug */,
+				B5E3C0CC2DD7798A000622FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B5E3C0D32DD78764000622FD /* MessageModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5E3C0D42DD78764000622FD /* MessageModel.xcdatamodel */,
+			);
+			currentVersion = B5E3C0D42DD78764000622FD /* MessageModel.xcdatamodel */;
+			path = MessageModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B5E3C0982DD751C8000622FD /* Project object */;
 }
