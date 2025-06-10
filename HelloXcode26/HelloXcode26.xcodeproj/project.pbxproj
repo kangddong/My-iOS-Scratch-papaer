@@ -10,6 +10,8 @@
 		B5938D7A2DF829CA00A75C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5938D762DF829CA00A75C46 /* Assets.xcassets */; };
 		B5938D7B2DF829CA00A75C46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5938D772DF829CA00A75C46 /* ContentView.swift */; };
 		B5938D7C2DF829CA00A75C46 /* HelloXcode26App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5938D782DF829CA00A75C46 /* HelloXcode26App.swift */; };
+		B5938D7E2DF8308A00A75C46 /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5938D7D2DF8308A00A75C46 /* MessageListViewController.swift */; };
+		B5938D802DF87CA000A75C46 /* ColorPickerViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5938D7F2DF87CA000A75C46 /* ColorPickerViewControllerRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		B5938D762DF829CA00A75C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5938D772DF829CA00A75C46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B5938D782DF829CA00A75C46 /* HelloXcode26App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloXcode26App.swift; sourceTree = "<group>"; };
+		B5938D7D2DF8308A00A75C46 /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
+		B5938D7F2DF87CA000A75C46 /* ColorPickerViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewControllerRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 				B5938D762DF829CA00A75C46 /* Assets.xcassets */,
 				B5938D772DF829CA00A75C46 /* ContentView.swift */,
 				B5938D782DF829CA00A75C46 /* HelloXcode26App.swift */,
+				B5938D7D2DF8308A00A75C46 /* MessageListViewController.swift */,
+				B5938D7F2DF87CA000A75C46 /* ColorPickerViewControllerRepresentable.swift */,
 			);
 			path = HelloXcode26;
 			sourceTree = "<group>";
@@ -129,7 +135,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5938D7B2DF829CA00A75C46 /* ContentView.swift in Sources */,
+				B5938D7E2DF8308A00A75C46 /* MessageListViewController.swift in Sources */,
 				B5938D7C2DF829CA00A75C46 /* HelloXcode26App.swift in Sources */,
+				B5938D802DF87CA000A75C46 /* ColorPickerViewControllerRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
