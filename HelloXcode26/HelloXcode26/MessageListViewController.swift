@@ -58,3 +58,11 @@ class MessageListViewController: UIViewController {
         statusLabel.text = unreadMessageModel.statusText
     }
 }
+
+
+import Playgrounds
+
+#Playground {
+    let model = UnreadMessageModel(showStatus: false, statusText: "")
+    model.showStatus = true
+}

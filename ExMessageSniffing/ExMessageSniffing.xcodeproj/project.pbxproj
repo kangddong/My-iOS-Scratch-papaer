@@ -15,6 +15,7 @@
 		B5E3C0D22DD77995000622FD /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3C0CF2DD77995000622FD /* MessageFilterExtension.swift */; };
 		B5E3C0D52DD78764000622FD /* MessageModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5E3C0D32DD78764000622FD /* MessageModel.xcdatamodeld */; };
 		B5E3C0D72DD78773000622FD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3C0D62DD78773000622FD /* PersistenceController.swift */; };
+		B5E3C0DB2DD78AD3000622FD /* MessageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3C0DA2DD78AD3000622FD /* MessageListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		B5E3C0CF2DD77995000622FD /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
 		B5E3C0D42DD78764000622FD /* MessageModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MessageModel.xcdatamodel; sourceTree = "<group>"; };
 		B5E3C0D62DD78773000622FD /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		B5E3C0D82DD78872000622FD /* MessageFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageFilter.entitlements; sourceTree = "<group>"; };
+		B5E3C0DA2DD78AD3000622FD /* MessageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 				B5E3C0B22DD751CF000622FD /* Preview Content */,
 				B5E3C0B32DD751CF000622FD /* Assets.xcassets */,
 				B5E3C0B42DD751CF000622FD /* ContentView.swift */,
+				B5E3C0DA2DD78AD3000622FD /* MessageListViewModel.swift */,
 				B5E3C0B52DD751CF000622FD /* ExMessageSniffingApp.swift */,
 				B5E3C0D32DD78764000622FD /* MessageModel.xcdatamodeld */,
 			);
@@ -114,6 +118,7 @@
 		B5E3C0D02DD77995000622FD /* MessageFilter */ = {
 			isa = PBXGroup;
 			children = (
+				B5E3C0D82DD78872000622FD /* MessageFilter.entitlements */,
 				B5E3C0CE2DD77995000622FD /* Info.plist */,
 				B5E3C0CF2DD77995000622FD /* MessageFilterExtension.swift */,
 			);
@@ -227,6 +232,7 @@
 			files = (
 				B5E3C0B72DD751CF000622FD /* ContentView.swift in Sources */,
 				B5E3C0D52DD78764000622FD /* MessageModel.xcdatamodeld in Sources */,
+				B5E3C0DB2DD78AD3000622FD /* MessageListViewModel.swift in Sources */,
 				B5E3C0B82DD751CF000622FD /* ExMessageSniffingApp.swift in Sources */,
 				B5E3C0D72DD78773000622FD /* PersistenceController.swift in Sources */,
 			);
@@ -431,6 +437,7 @@
 		B5E3C0CB2DD7798A000622FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MessageFilter/MessageFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FL4QTRRKMD;
@@ -456,6 +463,7 @@
 		B5E3C0CC2DD7798A000622FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MessageFilter/MessageFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FL4QTRRKMD;

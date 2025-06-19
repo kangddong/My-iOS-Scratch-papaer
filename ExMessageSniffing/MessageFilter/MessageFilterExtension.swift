@@ -11,17 +11,15 @@ final class MessageFilterExtension: ILMessageFilterExtension, ILMessageFilterQue
     func handle(_ queryRequest: ILMessageFilterQueryRequest,
                 context: ILMessageFilterExtensionContext,
                 completion: @escaping (ILMessageFilterQueryResponse) -> Void) {
-
-        defer {
-            let response = ILMessageFilterQueryResponse()
-            response.action = .allow // 필터링은 하지 않음
+        let response = ILMessageFilterQueryResponse()
+        guard let message = queryRequest.messageBody,
+              message.contains("입금") else {
+            response.action = .allow
             completion(response)
+            return
         }
 
-        guard let message = queryRequest.messageBody?.lowercased(),
-              message.contains("입금") else { return }
-
-        let defaults = UserDefaults(suiteName: "group.com.example.depositfilter")
+        let defaults = UserDefaults(suiteName: "group.arex.ExMessageSniffing.depositFilter")
         var queue = defaults?.array(forKey: "messageQueue") as? [[String: Any]] ?? []
 
         queue.append([
@@ -30,5 +28,7 @@ final class MessageFilterExtension: ILMessageFilterExtension, ILMessageFilterQue
         ])
 
         defaults?.set(queue, forKey: "messageQueue")
+        response.action = .transaction
+        completion(response)
     }
 }

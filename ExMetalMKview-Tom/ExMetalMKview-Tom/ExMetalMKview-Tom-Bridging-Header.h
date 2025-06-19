@@ -8,5 +8,6 @@
 #ifndef ExMetalMKview_Tom_Bridging_Header_h
 #define ExMetalMKview_Tom_Bridging_Header_h
 
+#import "AAPLShaderTypes.h"
 
 #endif /* ExMetalMKview_Tom_Bridging_Header_h */

@@ -12,6 +12,8 @@
 		B5938D7C2DF829CA00A75C46 /* HelloXcode26App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5938D782DF829CA00A75C46 /* HelloXcode26App.swift */; };
 		B5938D7E2DF8308A00A75C46 /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5938D7D2DF8308A00A75C46 /* MessageListViewController.swift */; };
 		B5938D802DF87CA000A75C46 /* ColorPickerViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5938D7F2DF87CA000A75C46 /* ColorPickerViewControllerRepresentable.swift */; };
+		B5938D822DF882D600A75C46 /* SFSymbol7.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5938D812DF882D600A75C46 /* SFSymbol7.swift */; };
+		B5938D842DF8850D00A75C46 /* SFSymbol7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5938D832DF8850D00A75C46 /* SFSymbol7ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		B5938D782DF829CA00A75C46 /* HelloXcode26App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloXcode26App.swift; sourceTree = "<group>"; };
 		B5938D7D2DF8308A00A75C46 /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
 		B5938D7F2DF87CA000A75C46 /* ColorPickerViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		B5938D812DF882D600A75C46 /* SFSymbol7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbol7.swift; sourceTree = "<group>"; };
+		B5938D832DF8850D00A75C46 /* SFSymbol7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbol7ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				B5938D782DF829CA00A75C46 /* HelloXcode26App.swift */,
 				B5938D7D2DF8308A00A75C46 /* MessageListViewController.swift */,
 				B5938D7F2DF87CA000A75C46 /* ColorPickerViewControllerRepresentable.swift */,
+				B5938D812DF882D600A75C46 /* SFSymbol7.swift */,
+				B5938D832DF8850D00A75C46 /* SFSymbol7ViewController.swift */,
 			);
 			path = HelloXcode26;
 			sourceTree = "<group>";
@@ -136,6 +142,8 @@
 			files = (
 				B5938D7B2DF829CA00A75C46 /* ContentView.swift in Sources */,
 				B5938D7E2DF8308A00A75C46 /* MessageListViewController.swift in Sources */,
+				B5938D822DF882D600A75C46 /* SFSymbol7.swift in Sources */,
+				B5938D842DF8850D00A75C46 /* SFSymbol7ViewController.swift in Sources */,
 				B5938D7C2DF829CA00A75C46 /* HelloXcode26App.swift in Sources */,
 				B5938D802DF87CA000A75C46 /* ColorPickerViewControllerRepresentable.swift in Sources */,
 			);

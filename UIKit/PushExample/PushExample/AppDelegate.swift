@@ -17,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        let replyAction = UNTextInputNotificationAction(
+            identifier: "REPLY_ACTION",
+            title: "답장",
+            options: [])
+
+        let category = UNNotificationCategory(
+            identifier: "MESSAGE_CATEGORY",
+            actions: [replyAction],
+            intentIdentifiers: [],
+            options: [])
+
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        
         FirebaseApp.configure()
         UIApplication.shared.registerForRemoteNotifications()
         UNUserNotificationCenter.current().delegate = self
@@ -74,6 +87,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
         print(#function)
+        if response.actionIdentifier == "REPLY_ACTION",
+           let textResponse = response as? UNTextInputNotificationResponse {
+            let userReply = textResponse.userText
+            print("User replied: \(userReply)")
+            // 여기에 메시지 전송 로직 작성
+        }
+        
         if let imageURLString = response.notification.request.content.userInfo["image"] as? String {
             print("imageURLString: \(imageURLString)")
         }

@@ -57,6 +57,19 @@ struct ExWidgetEntryView : View {
     }
 }
 
+struct ExWidgetEntryView2 : View {
+    var entry: Provider.Entry
+
+    var body: some View {
+        VStack {
+            Text("Time:")
+            Text(entry.date, style: .time)
+
+            Text("Emoji: ㅌㅌ22")
+        }
+    }
+}
+
 struct ExWidget: Widget {
     let kind: String = "ExWidget"
 
@@ -73,6 +86,25 @@ struct ExWidget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
+    }
+}
+
+struct ExWidget2: Widget {
+    let kind: String = "ExWidget2"
+
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+            if #available(iOS 17.0, *) {
+                ExWidgetEntryView2(entry: entry)
+                    .containerBackground(.fill.tertiary, for: .widget)
+            } else {
+                ExWidgetEntryView2(entry: entry)
+                    .padding()
+                    .background()
+            }
+        }
+        .configurationDisplayName("My Widget2")
+        .description("This is an example widget22.")
     }
 }
 

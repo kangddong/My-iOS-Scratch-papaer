@@ -12,5 +12,7 @@ import SwiftUI
 struct ExWidgetBundle: WidgetBundle {
     var body: some Widget {
         ExWidget()
+        ExWidget2()
     }
 }
+

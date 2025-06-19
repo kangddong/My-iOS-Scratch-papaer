@@ -11,7 +11,8 @@ import SwiftUI
 struct HelloXcode26App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            ColorPickerViewControllerRepresentable()
         }
     }
 }
